@@ -1,5 +1,5 @@
 <template lang="pug">
-  tutorial
+  .home Home
 </template>
 
 <script>
