@@ -10,20 +10,34 @@
                 form.form(@submit.prevent="submit")
                     v-input(
                         v-model="name"
+                        id="name"
                         icon="user"
                         :placeholder="$t('placeholders.name')"
+                        :error="errors.name"
+                        @input="validateName"
+                        @onBlur="editName"
                     )
 
                     v-input(
                         v-model="phone"
+                        :mask="mask"
                         icon="phone"
+                        id="phone"
+                        :error="errors.phone"
                         :placeholder="$t('placeholders.phone')"
+                        maxlength="18"
+                        @input="validatePhone"
+                        @onBlur="validatePhoneNumber"
+                        @onAccept="onAcceptInput"
+                        @onFocus="addTemplate"
                     )
 
                     v-button.form-button(color="primary") {{ $t("buttons.enroll") }}
 </template>
 
 <script>
+import { IMaskDirective } from 'vue-imask'
+import valitation from '@/mixins/validation'
 import VIcon from '@/components/common/VIcon'
 import VButton from '@/components/common/VButton'
 import VInput from '@/components/common/VInput'
@@ -35,7 +49,13 @@ export default {
         VIcon,
         VButton,
         VInput
-    }
+    },
+
+    directives: {
+        imask: IMaskDirective
+    },
+
+    mixins: [valitation]
 }
 </script>
 
