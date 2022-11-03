@@ -44,13 +44,21 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ['@nuxtjs/i18n', i18n]
+    ['@nuxtjs/i18n', i18n],
+    '@nuxtjs/google-fonts'
   ],
 
   styleResources: {
     sass: [
       '~/assets/sass/variables.sass'
     ]
+  },
+
+  googleFonts: {
+    display: 'swap',
+    families: {
+        Manrope: [400, 500, 600, 700],
+    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
