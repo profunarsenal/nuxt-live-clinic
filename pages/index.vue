@@ -5,9 +5,9 @@
     section-profile
     section-methods
     section-solutions
-    section-workers.container
+    section-workers.section
     section-entry
-    section-contacts.container
+    section-contacts.section
 </template>
 
 <script>
@@ -38,14 +38,15 @@ export default Vue.extend({
 </script>
 
 <style lang="sass" scoped>
-.container
-  padding-bottom: 150px
+.section
+    @extend .container
+    padding-bottom: 150px
 
 @media (max-width: 1366px)
-  .container
-    padding-bottom: 100px
+    .section
+        padding-bottom: 100px
 
 @media (max-width: 992px)
-  .container
-    padding-bottom: 72px
+    .section
+        padding-bottom: 72px
 </style>
