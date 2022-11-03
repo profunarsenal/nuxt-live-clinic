@@ -1,8 +1,8 @@
 <template lang="pug">
     .loader
         .loader-item(
-            v-for="(item, index) in loaderItems" 
-            :key="index" 
+            v-for="(item, index) in loaderItems"
+            :key="index"
         )
 </template>
 
