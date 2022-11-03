@@ -1,5 +1,5 @@
 <template lang="pug">
-  .home Home
+  .home {{$t('lang')}}
 </template>
 
 <script>

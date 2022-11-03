@@ -1,0 +1,225 @@
+{
+  "lang": "Ru",
+  "header": {
+    "navLinks": {
+      "main": "Home",
+      "services": "Services",
+      "specialists": "Specialists",
+      "info": "Information",
+      "contacts": "Contacts"
+    }
+  },
+  "footer": {
+    "navLinks": {
+      "about": "About clinic",
+      "questions": "FAQ",
+      "services": "Services",
+      "articles": "Articles",
+      "specialists": "Specialists",
+      "contacts": "Contacts"
+    },
+    "addres": "St. Petersburg, Paradnaya, 3к2",
+    "copy": {
+      "item1": "© 2022 liveclinic — modern clinic of psychological counseling",
+      "item2": "ООО «liveclinic» TIN 7842202240 OGRN 1227800050455"
+    },
+    "documents": {
+      "doc1": "Privacy Policy",
+      "doc2": "Offer"
+    }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "titleSection": "We are waiting for you at liveclinic",
+    "phoneText": "The call is free",
+    "items": [
+      {
+        "title": "Address",
+        "subtitle": "St. Petersburg, <br /> Paradnaya, 3к2",
+        "icon": "location"
+      },
+      {
+        "title": "Working hours",
+        "subtitle": "Mon-Fri: from 9:00 to 19:00 <br /> Sat-Sun: from 9:00 to 15:00",
+        "icon": "clock"
+      },
+      {
+        "title": "Mail",
+        "subtitle": "info@liveclinic.ru",
+        "icon": "message"
+      },
+      {
+        "title": "Telephone",
+        "subtitle": "+7 812 606-76-69",
+        "icon": "phone"
+      }
+    ]
+  },
+  "buttons": {
+    "enroll": "Make an appointment",
+    "change": "Find a specialist",
+    "enrollCard": "Enroll",
+    "more": "More",
+    "call": "Call me",
+    "whatsapp": "Contact via WhatsApp",
+    "telegram": "Contact via Telegram",
+    "whatsappMobile": "Write to WhatsApp",
+    "telegramMobile": "Write to Telegram"
+  },
+  "placeholders": {
+    "name": "Name",
+    "phone": "Phone number"
+  },
+  "title": {
+    "main": "liveclinic — <br/> modern clinic of psychological counseling"
+  },
+  "about": {
+    "title": "About the project",
+    "firstText": "liveclinic — this is a team of like-minded people, united by common professional values and views on the provision of truly high-quality and honest psychological counseling services.",
+    "secondText": "We strive to create the best conditions for the development of specialists so that our clients receive the best specialized assistance."
+  },
+  "profile": {
+    "title": "Job profile",
+    "items": [
+      {
+        "id": 1,
+        "title": "Couples therapy"
+      },
+      {
+        "id": 2,
+        "title": "Child-family therapy"
+      },
+      {
+        "id": 3,
+        "title": "Individual counseling"
+      }
+    ]
+  },
+  "methods": {
+    "title": "Working methods",
+    "subtitle": "In our work, we use rational and scientifically based paradigms",
+    "items": [
+      {
+        "name": "ST",
+        "title": "Schema Therapy",
+        "description": "this therapy is intended to work with patients for whom cognitive-behavioral therapy methods are ineffective, as well as for the treatment of major depressive and post-traumatic disorders and other psychological problems in individuals and couples."
+      },
+      {
+        "name": "АСТ",
+        "title": "Acceptance and Responsibility Therapy",
+        "description": "unlike traditional cognitive-behavioral psychotherapy, ACT teaches not to change or control your thoughts, experiences, feelings, but to notice and accept them, even if they are unpleasant. Ideal for long, consistent and deep work."
+      },
+      {
+        "name": "IFS",
+        "title": "Systemic Family Therapy",
+        "description": "a method of solving the mental and psychological problems of a person, and especially children, through the study of relationships in the family and the impact on these relationships. In this approach, a person is not an object of influence and a client. The client is the whole family, the whole family system, it is she who is the object of psychotherapeutic influence."
+      },
+      {
+        "name": "СВТ",
+        "title": "Cognitive Behavioral <br /> Therapy",
+        "description": "a method that helps to identify and change ineffective habits (patterns) associated with thinking, behavior, relationships with others, to more useful ones. CBT, unlike other forms of psychotherapy, focuses not on past traumas, but on current problems and how to solve them."
+      },
+      {
+        "name": "CFT",
+        "title": "Compassion Focused <br /> Therapy",
+        "description": "the model uses evolutionary psychology, attachment science, behaviorism, and classical cognitive behavioral therapy. CFT was originally designed for use with patients who suffer from high levels of shame and self-criticism and respond poorly to standard CBT protocols."
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Determination. Сreation",
+    "name": "Stupak Svyatoslav Germanovich",
+    "position": "Executive director liveclinic, clinical psychologist",
+    "items": [
+      {
+        "text": "We will formulate a pragmatic strategy for overcoming crises of a completely different profile and statute of limitations"
+      },
+      {
+        "text": "We will help to integrate the «past» into the «present» for a qualitative change in our «future»"
+      },
+      {
+        "text": "We will help you get out of destructive relationships: relationships with an abuser, co-dependent relationships, etc."
+      },
+      {
+        "text": "Together with you, we will identify the main problem areas in a short time"
+      },
+      {
+        "text": "We will support you in your <br /> accomplishments"
+      },
+      {
+        "text": "Let us help you make decisions that suit you"
+      },
+      {
+        "text": "Let us introduce you to yourself again"
+      },
+      {
+        "text": "Let's heal your injuries together"
+      }
+    ]
+  },
+  "specialists": {
+    "title": "Our <br /> specialists",
+    "badge": "Experience",
+    "more": "More about <br /> the specialist",
+    "error": "Technical work is underway, the section \"Our specialists\" is not available"
+  },
+  "specialist": {
+    "crumbs": "Our specialists",
+    "error": "Information about this specialist was not found"
+  },
+  "entry": {
+    "title": "Make an appointment",
+    "subtitle": "Fill out the form <br /> and we will contact you"
+  },
+  "services": {
+    "title": "Services and prices",
+    "error": "Technical work is underway, section \"Services and prices\" is not available"
+  },
+  "questions": {
+    "title": "FAQ",
+    "subtitle": "Can't find the answer to your question? <br /> Ask it personally to our specialists.",
+    "error": "Technical work is underway, \"FAQ\" section is not available"
+  },
+  "articles": {
+    "title": "Articles",
+    "read": "to read",
+    "crumbs": "Questions and articles",
+    "error": "Technical work is underway, \"Articles\" section is not available"
+  },
+  "article": {
+    "error": "Article not found"
+  },
+  "modalEntry": {
+    "title": "Appointment",
+    "subtitle": "Fill out the form and we will contact <br /> in a convenient way for you",
+    "text": "By clicking on the button, you consent to the processing of your personal data and agree to the privacy policy"
+  },
+  "validate": {
+    "name": "Required field",
+    "phone": "Enter phone number"
+  },
+  "minutes": "minute | minutes",
+  "titles": {
+    "home": "liveclinic",
+    "services": "Services",
+    "specialists": "Specialists",
+    "info": "FAQ",
+    "contacts": "Contacts",
+    "specialist": "Specialist",
+    "article": "Article"
+  },
+  "messages": {
+    "notData": {
+      "title": "Attention!",
+      "text": "The site is under maintenance, some data may not be available."
+    },
+    "formSucces": {
+      "title": "Thanks for the application!",
+      "text": "Our specialist will contact you shortly"
+    },
+    "formError": {
+      "title": "Error!",
+      "text": "The service is currently unavailable. To make an appointment call +7 812 606-76-69"
+    }
+  }
+}
