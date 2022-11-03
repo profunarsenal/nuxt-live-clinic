@@ -118,49 +118,49 @@ export default {
 
 <style lang="sass">
 .input-label
-  position: relative
-  display: block
+    position: relative
+    display: block
 
 .input-icon
-  position: absolute
-  top: 22px
-  left: 28px
-  fill: rgba($color-darkgray, 0.3)
+    position: absolute
+    top: 22px
+    left: 28px
+    fill: rgba($color-darkgray, 0.3)
 
 .input
-  width: 100%
-  padding: 18px 24px 18px 64px
-  font-weight: 500
-  font-size: 18px
-  line-height: 155%
-  color: $color-dark
-  border: 1px solid rgba($color-dark, 0.15)
-  border-radius: 16px
-  transition: all 0.3s ease
+    width: 100%
+    padding: 18px 24px 18px 64px
+    font-weight: 500
+    font-size: 18px
+    line-height: 155%
+    color: $color-dark
+    border: 1px solid rgba($color-dark, 0.15)
+    border-radius: 16px
+    transition: all 0.3s ease
 
-  &:hover
-    border: 1px solid rgba($color-dark, 0.3)
+    &:hover
+        border: 1px solid rgba($color-dark, 0.3)
 
-  &::placeholder
-    color: rgba($color-dark, 0.3)
+    &::placeholder
+        color: rgba($color-dark, 0.3)
 
-  &:focus
-    border: 1px solid $color-cyan
+    &:focus
+        border: 1px solid $color-cyan
 
-  &.not-valid
-    border: 1px solid $color-red
+    &.not-valid
+        border: 1px solid $color-red
 
 .input-error
-  position: absolute
-  font-size: 12px
-  top: -8px
-  right: 10px
-  background-color: $color-red
-  color: $color-white
-  padding: 4px 8px
-  border-radius: 10px
+    position: absolute
+    font-size: 12px
+    top: -8px
+    right: 10px
+    background-color: $color-red
+    color: $color-white
+    padding: 4px 8px
+    border-radius: 10px
 
 @media (max-width: 576px)
-  .input
-    font-size: 16px
+    .input
+        font-size: 16px
 </style>

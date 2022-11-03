@@ -36,44 +36,44 @@ export default {
 
 <style lang="sass" scoped>
 .badge
-  position: relative
-  display: inline-block
+    position: relative
+    display: inline-block
 
 .badge-icon
-  width: 100%
-  height: 100%
+    width: 100%
+    height: 100%
 
 .badge-content
-  position: absolute
-  top: 50%
-  left: 45%
-  transform: translate(-55%, -50%)
-  font-family: "Caveat", cursive
-  color: $color-white
+    position: absolute
+    top: 50%
+    left: 45%
+    transform: translate(-55%, -50%)
+    font-family: "Caveat", cursive
+    color: $color-white
 
 .number
-  width: 64px
-  height: 64px
+    width: 64px
+    height: 64px
 
-  & > .badge-icon
-    fill: $color-cyan
+    & > .badge-icon
+        fill: $color-cyan
 
-  & > .badge-content
-    font-size: 34px
+    & > .badge-content
+        font-size: 34px
 
 .discount-blue,
 .discount-green
-  width: 80px
-  height: 80px
+    width: 80px
+    height: 80px
 
-  & > .badge-content
-    font-size: 30px
-    letter-spacing: -0.05em
-    transform: translate(-48%, -50%) rotate(10deg)
+    & > .badge-content
+        font-size: 30px
+        letter-spacing: -0.05em
+        transform: translate(-48%, -50%) rotate(10deg)
 
 .discount-blue > .badge-icon
-  fill: $color-cyan
+    fill: $color-cyan
 
 .discount-green > .badge-icon
-  fill: $color-darkgreen
+    fill: $color-darkgreen
 </style>

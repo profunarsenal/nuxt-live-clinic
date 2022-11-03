@@ -48,68 +48,68 @@ export default {
 
 <style lang="sass" scoped>
 .button
-  position: relative
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 20px 57px
-  font-weight: 600
-  font-size: 18px
-  line-height: 135%
-  border-radius: 16px
-  transition: all 0.3s ease
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 20px 57px
+    font-weight: 600
+    font-size: 18px
+    line-height: 135%
+    border-radius: 16px
+    transition: all 0.3s ease
 
 .button-primary
-  color: $color-white
-  background: $color-cyan
+    color: $color-white
+    background: $color-cyan
 
-  @media (any-hover: hover)
-    &:hover
-      background: $color-cyanlight
+    @media (any-hover: hover)
+        &:hover
+            background: $color-cyanlight
 
 .button-secondary
-  color: $color-dark
-  background: $color-white
-  border: 1px solid $color-cyan
+    color: $color-dark
+    background: $color-white
+    border: 1px solid $color-cyan
 
-  @media (any-hover: hover)
-    &:hover
-      background: $color-aliceblue
+    @media (any-hover: hover)
+        &:hover
+            background: $color-aliceblue
 
 .button-whatsapp
-  color: $color-white
-  background: $color-green
+    color: $color-white
+    background: $color-green
 
-  @media (any-hover: hover)
-    &:hover
-      background: $color-lightgreen
+    @media (any-hover: hover)
+        &:hover
+            background: $color-lightgreen
 
 .button-telegram
-  color: $color-white
-  background: $color-blue
+    color: $color-white
+    background: $color-blue
 
-  @media (any-hover: hover)
-    &:hover
-      background: $color-lightblue
+    @media (any-hover: hover)
+        &:hover
+            background: $color-lightblue
 
 .button-icon
-  margin-left: 10px
+    margin-left: 10px
 
-  &.icon-telegram
-    fill: rgba($color-dark, 0.2)
+    &.icon-telegram
+        fill: rgba($color-dark, 0.2)
 
-  &.icon-whatsapp
-    fill: rgba(102, 112, 133, 0.3)
+    &.icon-whatsapp
+        fill: rgba(102, 112, 133, 0.3)
 
 @media (max-width: 992px)
-  .button
-    padding: 18px 46px
+    .button
+        padding: 18px 46px
 
 @media (max-width: 767px)
-  .button
-    padding: 18px 24px
+    .button
+        padding: 18px 24px
 
 @media (max-width: 480px)
-  .button
-    font-size: 16px
+    .button
+        font-size: 16px
 </style>

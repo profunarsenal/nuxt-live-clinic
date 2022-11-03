@@ -1,6 +1,6 @@
 <template lang="pug">
     .container
-        .solutions-inner
+        .solutions-wrapper
             h2.solutions-title {{ $t("solutions.title") }}
 
             .solutions-grid
@@ -42,104 +42,104 @@ export default {
 
 <style lang="sass" scoped>
 .solutions-title
-  @extend .title
-  margin-bottom: 72px
+    @extend .title
+    margin-bottom: 72px
 
-.solutions-inner
-  padding: 150px 0
+.solutions-wrapper
+    padding: 150px 0
 
 .solutions-grid
-  display: grid
-  grid-template-columns: repeat(3, 1fr)
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
 
 .director
-  display: flex
-  flex-direction: column
-  margin-right: 48px
-
-.avatar
-  margin-bottom: 106px
-  width: 256px
-  height: 256px
-  object-fit: cover
-  border-radius: 50%
-
-.solutions-icon
-  margin-bottom: 32px
-  fill: $color-dark
-
-.director-name
-  margin-bottom: 12px
-  font-weight: 600
-  font-size: 24px
-  line-height: 135%
-
-.director-position
-  font-size: 18px
-  line-height: 155%
-  color: $color-darkgray
-
-.solutions-items
-  grid-column: 2/4
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: repeat(4, min-content)
-  column-gap: 48px
-  row-gap: 40px
-
-.check
-  margin-bottom: 12px
-  fill: $color-cyan
-
-.description
-  font-size: 18px
-  line-height: 155%
-
-@media (max-width: 992px)
-  .solutions-inner
-    padding: 100px 0
-
-  .avatar
-    margin-bottom: 50px
-    width: 226px
-    height: 226px
-
-  .solutions-items
-    column-gap: 42px
-    row-gap: 20px
-
-  .check
-    margin-bottom: 6px
-
-@media (max-width: 767px)
-  .solutions-inner
-    padding: 72px 0
-
-  .solutions-title
-    margin-bottom: 40px
-    text-align: center
-
-  .solutions-icon
-    display: none
-
-  .solutions-grid
     display: flex
     flex-direction: column
+    margin-right: 48px
 
-  .avatar
+.avatar
+    margin-bottom: 106px
     width: 256px
     height: 256px
-    margin: 0 auto 30px
+    object-fit: cover
+    border-radius: 50%
 
-  .director
-    margin-right: 0
-    margin-bottom: 40px
-    text-align: center
+.solutions-icon
+    margin-bottom: 32px
+    fill: $color-dark
+
+.director-name
+    margin-bottom: 12px
+    font-weight: 600
+    font-size: 24px
+    line-height: 135%
+
+.director-position
+    font-size: 18px
+    line-height: 155%
+    color: $color-darkgray
+
+.solutions-items
+    grid-column: 2/4
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(4, min-content)
+    column-gap: 48px
+    row-gap: 40px
+
+.check
+    margin-bottom: 12px
+    fill: $color-cyan
+
+.description
+    font-size: 18px
+    line-height: 155%
+
+@media (max-width: 992px)
+    .solutions-wrapper
+        padding: 100px 0
+
+    .avatar
+        margin-bottom: 50px
+        width: 226px
+        height: 226px
+
+    .solutions-items
+        column-gap: 42px
+        row-gap: 20px
+
+    .check
+        margin-bottom: 6px
+
+@media (max-width: 767px)
+    .solutions-wrapper
+        padding: 72px 0
+
+    .solutions-title
+        margin-bottom: 40px
+        text-align: center
+
+    .solutions-icon
+        display: none
+
+    .solutions-grid
+        display: flex
+        flex-direction: column
+
+    .avatar
+        width: 256px
+        height: 256px
+        margin: 0 auto 30px
+
+    .director
+        margin-right: 0
+        margin-bottom: 40px
+        text-align: center
 
 @media (max-width: 576px)
-  .solutions-items
-    grid-template-columns: 1fr
-    grid-template-rows: repeat(8, min-content)
-    column-gap: 0
-    row-gap: 40px
+    .solutions-items
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(8, min-content)
+        column-gap: 0
+        row-gap: 40px
 </style>
