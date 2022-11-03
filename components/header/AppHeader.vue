@@ -8,7 +8,7 @@
                 alt="logo"
             )
 
-        nav
+        nav.navigation
             ul.navigation-list
                 li.navigation-item
                     nuxt-link.navigation-link(to="/") {{ $t("header.navLinks.main") }}
