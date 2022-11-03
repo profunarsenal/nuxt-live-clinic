@@ -65,6 +65,16 @@ module.exports = {
         imports: 'never',
         exports: 'never',
         functions: 'never'
+    }],
+    'spaced-comment': [2, 'always', {
+        line: {
+            markers: ['/'],
+            exceptions: ['-', '+']
+        },
+        block: {
+            markers: ['!'],
+            exceptions: ['*']
+        }
     }]
   }
 }
