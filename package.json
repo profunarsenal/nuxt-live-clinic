@@ -20,11 +20,13 @@
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
     "vue": "^2.7.10",
+    "vue-imask": "^6.4.3",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
+    "@nuxtjs/composition-api": "^0.33.1",
     "@nuxtjs/eslint-config": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/style-resources": "^1.2.1",
