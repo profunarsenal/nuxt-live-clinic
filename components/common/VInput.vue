@@ -7,26 +7,23 @@
 
         input(
             :class="inputClasses"
-            :id="modelValue"
+            :id="id"
             :type="type"
             :placeholder="placeholder"
             :maxlength="maxlength"
-            v-model.trim="modelValue"
+            :value="value"
             v-imask="mask"
             @input="update"
             @blur="blur"
             @focus="focus"
             @accept="accept"
-            @keypress="keypress"
         )
 
-        p.input-error(
-            v-for="error of errors"
-            :key="error.$uid"
-        ) {{ error.$message }}
+        p.input-error(v-if="error") {{ error }}
 </template>
 
 <script>
+import { IMaskDirective } from 'vue-imask'
 import VIcon from '@/components/common/VIcon'
 
 export default {
@@ -35,11 +32,20 @@ export default {
     components: {
         VIcon
     },
+    
+    directives: {
+        imask: IMaskDirective
+    },
 
     props: {
-        modelValue: {
-            type: String,
+        value: {
+            type: [String, Number],
             default: ''
+        },
+
+        id: {
+            type: String,
+            default: null
         },
 
         icon: {
@@ -57,9 +63,9 @@ export default {
             required: true
         },
 
-        errors: {
-            type: Array,
-            default: () => []
+        error: {
+            type: String,
+            default: ''
         },
 
         maxlength: {
@@ -74,22 +80,25 @@ export default {
     },
 
     emits: [
-        'update:modelValue',
+        'input',
         'onBlur',
         'onFocus',
-        'onAccept',
-        'onKeypress'
+        'onAccept'
     ],
 
     computed: {
         inputClasses () {
-            return ['input', { 'not-valid': this.errors.length }]
+            return ['input', { 'not-valid': this.error }]
         }
     },
 
     methods: {
         update (event) {
-            this.$emit('update:modelValue', event.target.value)
+            if (this.id === 'name') {
+                event.target.value = event.target.value.replace(/[^\D]/gi, '')
+            }
+
+            this.$emit('input', event.target.value)
         },
 
         blur (event) {
@@ -102,10 +111,6 @@ export default {
 
         accept (event) {
             this.$emit('onAccept', event)
-        },
-
-        keypress (event) {
-            this.$emit('onKeypress', event.target.value)
         }
     }
 }
