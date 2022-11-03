@@ -19,9 +19,9 @@ module.exports = {
     'eol-last': 0,
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
     'no-trailing-spaces': [2, { skipBlankLines: true }],
-    "quotes": ["error", "single"],
-    "indent": "off",
-    "vue/component-definition-name-casing": ["error", "PascalCase"],
+    quotes: ['error', 'single'],
+    indent: 'off',
+    'vue/component-definition-name-casing': ['error', 'PascalCase'],
     'vue/order-in-components': ['error', {
         order: [
           'el',
@@ -59,12 +59,12 @@ module.exports = {
           'renderError'
         ]
        }],
-       "comma-dangle": ["error", {
-        "arrays": "never",
-        "objects": "never",
-        "imports": "never",
-        "exports": "never",
-        "functions": "never"
+       'comma-dangle': ['error', {
+        arrays: 'never',
+        objects: 'never',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never'
     }]
   }
 }

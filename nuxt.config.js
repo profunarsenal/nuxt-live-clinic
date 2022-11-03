@@ -57,7 +57,7 @@ export default {
   googleFonts: {
     display: 'swap',
     families: {
-        Manrope: [400, 500, 600, 700],
+        Manrope: [400, 500, 600, 700]
     }
   },
 
