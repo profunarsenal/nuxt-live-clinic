@@ -28,7 +28,7 @@ export default {
         color: {
             type: String,
             default: 'primary',
-            validator: (value) => {
+            validator: value => {
                 return ['primary', 'secondary', 'whatsapp', 'telegram'].includes(value)
             }
         }

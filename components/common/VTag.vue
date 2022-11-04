@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(:class="")
+    div(:class="tagClasses")
         slot
 </template>
 
@@ -11,7 +11,7 @@ export default {
         color: {
             type: String,
             default: 'psychoanalysis',
-            validator: (value) => {
+            validator: value => {
                 return [
                 'psychoanalysis',
                 'organism',
