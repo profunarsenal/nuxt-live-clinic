@@ -75,6 +75,7 @@ module.exports = {
             markers: ['!'],
             exceptions: ['*']
         }
-    }]
+    }],
+    'arrow-parens': ['error', 'as-needed']
   }
 }
