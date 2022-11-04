@@ -11,15 +11,35 @@
         nav.navigation
             ul.navigation-list
                 li.navigation-item
-                    nuxt-link.navigation-link(to="/") {{ $t("header.navLinks.main") }}
+                    nuxt-link.navigation-link(
+                        to="/"
+                        active-class='active'
+                        exact
+                    ) {{ $t("header.navLinks.main") }}
+
                 li.navigation-item
-                    nuxt-link.navigation-link(to="/") {{ $t("header.navLinks.services") }}
+                    nuxt-link.navigation-link(
+                        to="/services"
+                        active-class='active'
+                    ) {{ $t("header.navLinks.services") }}
+
                 li.navigation-item
-                    nuxt-link.navigation-link(to="/") {{ $t("header.navLinks.specialists") }}
+                    nuxt-link.navigation-link(
+                        to="/specialists"
+                        active-class='active'
+                    ) {{ $t("header.navLinks.specialists") }}
+
                 li.navigation-item
-                    nuxt-link.navigation-link(to="/") {{ $t("header.navLinks.info") }}
+                    nuxt-link.navigation-link(
+                        to="/info"
+                        active-class='active'
+                    ) {{ $t("header.navLinks.info") }}
+
                 li.navigation-item
-                    nuxt-link.navigation-link(to="/") {{ $t("header.navLinks.contacts") }}
+                    nuxt-link.navigation-link(
+                        to="/contacts"
+                        active-class='active'
+                    ) {{ $t("header.navLinks.contacts") }}
 
         .contacts
             .contacts-call
