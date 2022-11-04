@@ -1,6 +1,6 @@
 <template lang="pug">
     li(:class="cardClasses")
-        v-icon.card-icon(icon="check")ъ
+        v-icon.card-icon(icon="check")
         
         h6.card-title {{ service.title }}
 
