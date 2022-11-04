@@ -6,7 +6,7 @@
                 src="@/assets/images/workers.svg"
                 alt="illustration"
             )
-            v-icon.worker-icon(icon="arrow")
+            v-icon.workers-icon(icon="arrow")
 
         ul.workers-cards
             card-worker(
