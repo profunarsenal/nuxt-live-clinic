@@ -79,7 +79,7 @@ export default {
     border-radius: 20px
     overflow: hidden
     cursor: pointer
-
+    
     @media (any-hover: hover)
         &:hover
             &::after
@@ -91,22 +91,22 @@ export default {
                 height: 100%
                 background: rgba(0, 0, 0, 0.2)
 
-        .card-image
-            filter: blur(10px)
+            .card-image
+                filter: blur(10px)
 
-        .card-link
-            opacity: 1
-            visibility: visible
-            transform: translate(-50%, -50%) scale(1)
+            .card-link
+                opacity: 1
+                visibility: visible
+                transform: translate(-50%, -50%) scale(1)
 
-        .card-button
-            opacity: 1
-            visibility: visible
-            transform: translateY(0)
+            .card-button
+                opacity: 1
+                visibility: visible
+                transform: translateY(0)
 
-        .card-badge
-            opacity: 0
-            visibility: hidden
+            .card-badge
+                opacity: 0
+                visibility: hidden
 
 .card-image
     width: 100%
