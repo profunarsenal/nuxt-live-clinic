@@ -23,11 +23,19 @@ export default {
         if (!store.getters['spollers/spollers'].length) {
             await store.dispatch('spollers/getSpollers')
         }
+
+        if (!store.getters['articles/articles'].length) {
+            await store.dispatch('articles/getArticles')
+        }
     },
 
     computed: {
         spollers () {
             return this.$store.getters['spollers/spollers']
+        },
+
+        articles () {
+            return this.$store.getters['articles/articles']
         }
     },
 
