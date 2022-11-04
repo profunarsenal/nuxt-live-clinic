@@ -5,7 +5,7 @@
     section-profile
     section-methods
     section-solutions
-    section-workers.section
+    section-workers.section(:workers="workers")
     section-entry
     section-contacts.section
 </template>
@@ -33,6 +33,18 @@ export default Vue.extend({
         SectionWorkers,
         SectionEntry,
         SectionContacts
+    },
+
+    async fetch ({ store }) {
+        if (!store.getters['workers/workers'].length) {
+            await store.dispatch('workers/getWorkers')
+        }
+    },
+
+    computed: {
+        workers () {
+            return this.$store.getters['workers/workers']
+        }
     }
 })
 </script>
