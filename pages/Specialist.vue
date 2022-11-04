@@ -65,9 +65,6 @@ export default {
     gap: 16px
     padding: 132px 0
 
-.worker-loader
-    padding: 200px 0
-
 @media (max-width: 1366px)
     .other-specialists
         padding: 100px 0
