@@ -15,18 +15,25 @@
             color="primary"
             @click="openModal"
         )   {{ $t("buttons.enroll") }}
+
+        modal-entry(
+            :isOpenModal="isOpenModal"
+            @close="closeModal"
+        )
 </template>
 
 <script>
 import VIcon from '@/components/common/VIcon'
 import VButton from '@/components/common/VButton'
+import ModalEntry from '@/components/modals/ModalEntry'
 
 export default {
     name: 'ContactsBlock',
 
     components: {
         VIcon,
-        VButton
+        VButton,
+        ModalEntry
     },
 
     props: {

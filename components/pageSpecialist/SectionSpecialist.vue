@@ -33,6 +33,11 @@
                     @click="openModal"
                 )   {{ $t("buttons.enroll") }}
 
+                modal-entry(
+                    :isOpenModal="isOpenModal"
+                    @close="closeModal"
+                )
+
     .error-message(v-else) {{ $t("specialist.error") }}
 </template>
 
@@ -40,6 +45,7 @@
 import VCrumbs from '@/components/common/VCrumbs'
 import VIcon from '@/components/common/VIcon'
 import VButton from '@/components/common/VButton'
+import ModalEntry from '@/components/modals/ModalEntry'
 
 export default {
     name: 'SectionSpecialist',
@@ -47,7 +53,8 @@ export default {
     components: {
         VCrumbs,
         VIcon,
-        VButton
+        VButton,
+        ModalEntry
     },
 
     props: {
@@ -59,7 +66,7 @@ export default {
 
     data () {
         return {
-            sOpenModal: false
+            isOpenModal: false
         }
     },
 

@@ -27,24 +27,31 @@
         .mobile-buttons
             v-button.mobile-button(
                 color="primary"
-                @click="openModal"
+                @click.prevent="openModal"
             ) {{ $t("buttons.enrollCard") }}
             v-button.mobile-button(
                 color="secondary"
                 @click="$router.push(`/specialist?id=${worker.id}`)"
             ) {{ $t("buttons.more") }}
+
+        modal-entry(
+            :isOpenModal="isOpenModal"
+            @close="closeModal"
+        )
 </template>
 
 <script>
 import VIcon from '@/components/common/VIcon'
 import VButton from '@/components/common/VButton'
+import ModalEntry from '@/components/modals/ModalEntry'
 
 export default {
     name: 'CardWorker',
 
     components: {
         VIcon,
-        VButton
+        VButton,
+        ModalEntry
     },
 
     props: {
