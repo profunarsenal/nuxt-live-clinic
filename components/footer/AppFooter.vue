@@ -48,9 +48,9 @@
                         span.contacts-text info@liveclinic.ru
 
                     .social
-                        a.social-link(href="https://wa.me/79276560393")
+                        a.social-link(href="#")
                             v-icon.social-icon.icon-whatsapp(icon="whatsapp")
-                        a.social-link(href="tg://resolve?domain=prohorov_i")
+                        a.social-link(href="#")
                             v-icon.social-icon.icon-telegram(icon="telegram")
                         a.social-link(href="malito:info@liveclinic.ru")
                             v-icon.social-icon.icon-email(icon="email")

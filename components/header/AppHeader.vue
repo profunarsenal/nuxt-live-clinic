@@ -1,71 +1,72 @@
 <template lang="pug">
     header(:class="headerClasses")
-        nuxt-link.logo(
-            to="/"
-        )
-            img.logo-image(
-                src="@/assets/images/logo.svg"
-                alt="logo"
+        .header-wrapper
+            nuxt-link.logo(
+                to="/"
             )
-
-        nav.navigation
-            ul.navigation-list
-                li.navigation-item
-                    nuxt-link.navigation-link(
-                        to="/"
-                        active-class='active'
-                        exact
-                    ) {{ $t("header.navLinks.main") }}
-
-                li.navigation-item
-                    nuxt-link.navigation-link(
-                        to="/services"
-                        active-class='active'
-                    ) {{ $t("header.navLinks.services") }}
-
-                li.navigation-item
-                    nuxt-link.navigation-link(
-                        to="/specialists"
-                        active-class='active'
-                    ) {{ $t("header.navLinks.specialists") }}
-
-                li.navigation-item
-                    nuxt-link.navigation-link(
-                        to="/info"
-                        active-class='active'
-                    ) {{ $t("header.navLinks.info") }}
-
-                li.navigation-item
-                    nuxt-link.navigation-link(
-                        to="/contacts"
-                        active-class='active'
-                    ) {{ $t("header.navLinks.contacts") }}
-
-        .contacts
-            .contacts-call
-                span.contacts-title +7 812 606-76-69
-                span.contacts-text {{ $t("contacts.phoneText") }}
-            a.contacts-link(href="https://wa.me/79276560393")
-                v-icon.contacts-icon.icon-whatsapp(
-                    icon="whatsapp"
+                img.logo-image(
+                    src="@/assets/images/logo.svg"
+                    alt="logo"
                 )
-            a.contacts-link(href="tg://resolve?domain=prohorov_i")
-                v-icon.contacts-icon.icon-telegram(
-                    icon="telegram"
+
+            nav.navigation
+                ul.navigation-list
+                    li.navigation-item
+                        nuxt-link.navigation-link(
+                            to="/"
+                            active-class='active'
+                            exact
+                        ) {{ $t("header.navLinks.main") }}
+
+                    li.navigation-item
+                        nuxt-link.navigation-link(
+                            to="/services"
+                            active-class='active'
+                        ) {{ $t("header.navLinks.services") }}
+
+                    li.navigation-item
+                        nuxt-link.navigation-link(
+                            to="/specialists"
+                            active-class='active'
+                        ) {{ $t("header.navLinks.specialists") }}
+
+                    li.navigation-item
+                        nuxt-link.navigation-link(
+                            to="/info"
+                            active-class='active'
+                        ) {{ $t("header.navLinks.info") }}
+
+                    li.navigation-item
+                        nuxt-link.navigation-link(
+                            to="/contacts"
+                            active-class='active'
+                        ) {{ $t("header.navLinks.contacts") }}
+
+            .contacts
+                .contacts-call
+                    span.contacts-title +7 812 606-76-69
+                    span.contacts-text {{ $t("contacts.phoneText") }}
+                a.contacts-link(href="#")
+                    v-icon.contacts-icon.icon-whatsapp(
+                        icon="whatsapp"
+                    )
+                a.contacts-link(href="#")
+                    v-icon.contacts-icon.icon-telegram(
+                        icon="telegram"
+                    )
+                button.button-lang(@click="switchLang") {{ $t('lang') }}
+            
+            button.burger-button(@click="")
+                v-icon(
+                    v-if="!isOpenMenuBurger"
+                    class="burger-icon"
+                    icon="burger"
                 )
-            button.button-lang(@click="switchLang") {{ $t('lang') }}
-        
-        button.burger-button(@click="")
-            v-icon(
-                v-if="!isOpenMenuBurger"
-                class="burger-icon"
-                icon="burger"
-            )
-            v-icon(
-                v-else
-                class="burger-icon"
-                icon="close"
-            )
+                v-icon(
+                    v-else
+                    class="burger-icon"
+                    icon="close"
+                )
 </template>
 
 <script>
@@ -141,16 +142,18 @@ export default {
     top: 0
     left: 0
     width: 100%
-    display: flex
-    align-items: center
-    justify-content: space-between
-    height: 96px
-    padding: 0 32px
 
     &.scroll
         position: fixed
         background-color: $color-white
         box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.1)
+
+.header-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 96px
+    padding: 0 32px
 
 .logo
     position: relative
@@ -276,9 +279,6 @@ export default {
 
 @media (max-width: 767px)
     .header
-        height: 80px
-        padding: 0 16px
-
         &::after
             content: ""
             position: absolute
@@ -293,6 +293,10 @@ export default {
         &.open
             &::after
                 top: 0
+
+    .header-wrapper
+        height: 80px
+        padding: 0 16px
 
     .navigation
         position: fixed
