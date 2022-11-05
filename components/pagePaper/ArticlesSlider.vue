@@ -1,10 +1,9 @@
 <template lang="pug">
-    .slider
-        swiper(:options="swiperOption")
-            .swiper-slide(
-                v-for="article in articles" :key="article.id"
-            )
-                <card-article :article="article" />
+    swiper(:options="swiperOption")
+        .swiper-slide(
+            v-for="article in articles" :key="article.id"
+        )
+            <card-article :article="article" />
 </template>
 
 <script>
