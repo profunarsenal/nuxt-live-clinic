@@ -42,6 +42,15 @@ export default {
         }
     },
 
+    watch: {
+        worker () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    },
+
     mounted () {
         this.setTitle()
     },

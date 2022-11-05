@@ -35,6 +35,15 @@ export default {
         }
     },
 
+    watch: {
+        article () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    },
+
     mounted () {
         this.setTitle()
     },
