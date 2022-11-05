@@ -13,7 +13,7 @@
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
-                                @click.prevent="goToSection('/', 'about-inner')"
+                                @click.prevent="goToSection('/', 'about-wrapper')"
                             )   {{ $t("footer.navLinks.about") }}
                         li.navigation-item
                             a.navigation-link(
@@ -69,7 +69,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 import VIcon from '@/components/common/VIcon'
 
 export default {
@@ -80,8 +79,6 @@ export default {
     },
 
     methods: {
-        ...mapMutations(['onScroll']),
-
         goToPage (path) {
             if (this.$route.path === path) {
                 window.scrollTo({
@@ -96,10 +93,9 @@ export default {
         goToSection (path, section) {
             if (this.$route.path === path) {
                 document.querySelector(`.${section}`).scrollIntoView({
-                behavior: 'smooth'
+                    behavior: 'smooth'
                 })
             } else {
-                this.onScroll()
                 this.$router.push(path)
             }
         }
