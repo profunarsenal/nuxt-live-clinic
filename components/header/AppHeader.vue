@@ -126,10 +126,12 @@ export default {
 
         switchLang () {
             if (this.$i18n.locale === 'ru') {
-                this.$i18n.setLocale('en')
+                localStorage.setItem('lang', 'en')
             } else {
-                this.$i18n.setLocale('ru')
+                localStorage.setItem('lang', 'ru')
             }
+
+            window.location.reload()
         }
     }
 }
