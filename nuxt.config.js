@@ -1,4 +1,4 @@
-import i18n from './i18n/index'
+import i18n from './locales/index'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -30,7 +30,7 @@ export default {
   plugins: [
     '~/plugins/axios',
     '~/plugins/service',
-    '~/plugins/yandex-map',
+    { src: '~/plugins/yandex-map', ssr: false },
     { src: '~/plugins/swiper', ssr: false }
   ],
 
