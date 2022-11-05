@@ -1,7 +1,7 @@
 <template lang="pug">
     .wrapper
         AppHeader
-        .main
+        main.main
             Nuxt
         AppFooter
 </template>
