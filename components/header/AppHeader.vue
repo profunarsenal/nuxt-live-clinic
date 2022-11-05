@@ -9,34 +9,34 @@
                     alt="logo"
                 )
 
-            nav.navigation
+            nav(:class="navigationClasses")
                 ul.navigation-list
-                    li.navigation-item
+                    li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/"
                             active-class='active'
                             exact
                         ) {{ $t("header.navLinks.main") }}
 
-                    li.navigation-item
+                    li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/services"
                             active-class='active'
                         ) {{ $t("header.navLinks.services") }}
 
-                    li.navigation-item
+                    li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/specialists"
                             active-class='active'
                         ) {{ $t("header.navLinks.specialists") }}
 
-                    li.navigation-item
+                    li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/info"
                             active-class='active'
                         ) {{ $t("header.navLinks.info") }}
 
-                    li.navigation-item
+                    li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/contacts"
                             active-class='active'
@@ -56,7 +56,7 @@
                     )
                 button.button-lang(@click="switchLang") {{ $t('lang') }}
             
-            button.burger-button(@click="")
+            button.burger-button(@click="toggleMenu")
                 v-icon(
                     v-if="!isOpenMenuBurger"
                     class="burger-icon"

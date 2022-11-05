@@ -14,6 +14,7 @@
                 :key="card.id"
                 :worker="card"
             )
+
     .error-message(v-else) {{ $t("specialists.error") }}
 </template>
 
@@ -96,7 +97,7 @@ export default {
         text-align: center
 
 @media (max-width: 576px)
-    .workers-card
+    .workers-cards
         grid-template-columns: repeat(1, minmax(268px, 300px))
         grid-template-rows: repeat(4, 1fr)
 </style>

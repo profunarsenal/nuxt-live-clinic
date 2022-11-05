@@ -188,7 +188,7 @@ export default {
         flex-direction: column
 
     .methods-item
-        height: auto
+        max-height: 800px
 
     .description-hide
         display: block
