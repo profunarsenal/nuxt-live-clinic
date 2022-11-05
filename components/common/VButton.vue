@@ -1,5 +1,8 @@
 <template lang="pug">
-    button(:class="buttonClasses")
+    button(
+        :class="buttonClasses"
+        @click="click"
+    )
         slot
 
         v-icon(
@@ -34,6 +37,8 @@ export default {
         }
     },
 
+    emits: ['click'],
+
     computed: {
         iconClasses () {
             return ['button-icon', `icon-${this.icon}`]
@@ -41,6 +46,12 @@ export default {
 
         buttonClasses () {
             return ['button', `button-${this.color}`]
+        }
+    },
+
+    methods: {
+        click (event) {
+            this.$emit('click', event)
         }
     }
 }
