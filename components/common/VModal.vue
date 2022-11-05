@@ -1,6 +1,6 @@
 <template lang="pug">
-    teleport(to=".wrapper")
-        .modal(v-if="isOpenModal")
+    Teleport(to=".wrapper")
+        .modal(v-show="isOpenModal")
             .modal-back(
                 :style="paddingStyle"
                 @click="$emit('close')"
@@ -13,13 +13,15 @@
 </template>
 
 <script>
+import Teleport from 'vue2-teleport'
 import VIcon from '@/components/common/VIcon'
 
 export default {
     name: 'VModal',
 
     components: {
-        VIcon
+        VIcon,
+        Teleport
     },
 
     props: {
