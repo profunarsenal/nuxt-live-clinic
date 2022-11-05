@@ -30,6 +30,7 @@ export default {
   plugins: [
     '~/plugins/axios',
     '~/plugins/service',
+    '~/plugins/yandex-map',
     { src: '~/plugins/swiper', ssr: false }
   ],
 
