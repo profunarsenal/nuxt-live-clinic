@@ -10,7 +10,8 @@ export default {
             mask: {
                 mask: '+{7} (000) 000-00-00',
                 lazy: true
-            }
+            },
+            isFormValid: false
         }
     },
 
@@ -57,10 +58,36 @@ export default {
             }
         },
 
-        submit () {
-            if (this.errors.name === '' && this.errors.phone === '') {
-                this.name = ''
-                this.phone = ''
+        resetForm () {
+            this.name = ''
+            this.phone = ''
+        },
+
+        clearErrors () {
+            this.errors.name = null
+            this.errors.phone = null
+        },
+
+        checkForm () {
+            if (this.name === '') {
+                this.errors.name = this.$t('validate.name')
+            } else {
+                this.isFormValid = true
+            }
+
+            if (this.phone === '') {
+                this.errors.phone = this.$t('validate.name')
+                this.isFormValid = false
+            } else {
+                this.isFormValid = true
+            }
+
+            // eslint-disable-next-line
+            if (!/^[\d\+][\d\(\)\ -]{16,18}\d$/.test(this.phone)) {
+                this.errors.phone = this.$t('validate.phone')
+                this.isFormValid = false
+            } else {
+                this.isFormValid = true
             }
         }
     }

@@ -33,6 +33,12 @@
                     )
 
                     v-button.form-button(color="primary") {{ $t("buttons.enroll") }}
+    
+                    modal-message(
+                        :isOpenModal="isOpenModalMessage"
+                        :message="message"
+                        @close="closeModal"
+                    )
 </template>
 
 <script>
@@ -41,6 +47,7 @@ import valitation from '@/mixins/validation'
 import VIcon from '@/components/common/VIcon'
 import VButton from '@/components/common/VButton'
 import VInput from '@/components/common/VInput'
+import ModalMessage from '@/components/modals/ModalMessage'
 
 export default {
     name: 'SectionEntry',
@@ -48,14 +55,59 @@ export default {
     components: {
         VIcon,
         VButton,
-        VInput
+        VInput,
+        ModalMessage
     },
 
     directives: {
         imask: IMaskDirective
     },
 
-    mixins: [valitation]
+    mixins: [valitation],
+
+    data () {
+        return {
+            isOpenModalMessage: false,
+            message: {}
+        }
+    },
+
+    methods: {
+        async submit () {
+            await this.checkForm()
+
+            if (this.isFormValid) {
+                try {
+                    await this.$service.applications.sendApplication({
+                        name: this.name,
+                        phone: this.phone
+                    })
+
+                    this.setMessage(this.$t('messages.formSucces'))
+                    this.openModal()
+
+                    this.resetForm()
+                    this.clearErrors()
+                    this.isFormValid = false
+                } catch {
+                    this.setMessage(this.$t('messages.formError'))
+                    this.openModal()
+                }
+            }
+        },
+
+        openModal () {
+            this.isOpenModalMessage = true
+        },
+
+        closeModal () {
+            this.isOpenModalMessage = false
+        },
+
+        setMessage (obj) {
+            this.message = obj
+        }
+    }
 }
 </script>
 
