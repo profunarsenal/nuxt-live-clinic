@@ -53,9 +53,9 @@ export default Vue.extend({
         }
     },
 
-    async mounted () {
+    mounted () {
         if (this.$route.query.section) {
-            await this.scrollToSection()
+            this.scrollToSection()
         }
     },
 

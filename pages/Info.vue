@@ -45,9 +45,9 @@ export default {
         }
     },
 
-    async mounted () {
+    mounted () {
         if (this.$route.query.section) {
-            await this.scrollToSection()
+            this.scrollToSection()
         }
     },
 
