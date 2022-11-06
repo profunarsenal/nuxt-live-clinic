@@ -1,8 +1,5 @@
 <template lang="pug">
-    v-modal(
-        :isOpenModal="isOpenModal"
-        @close="$emit('close')"
-    )
+    v-modal(@close="$emit('close')")
         .modal-message(v-if="message")
             h6.message-title {{ message.title }}
             p.message-text {{ message.text }}
@@ -22,11 +19,6 @@ export default {
         message: {
             type: Object,
             default: () => {}
-        },
-
-        isOpenModal: {
-            type: Boolean,
-            default: false
         }
     }
 }

@@ -35,7 +35,7 @@
                     v-button.form-button(color="primary") {{ $t("buttons.enroll") }}
     
                     modal-message(
-                        :isOpenModal="isOpenModalMessage"
+                        v-if="isOpenModal"
                         :message="message"
                         @close="closeModal"
                     )
@@ -67,7 +67,7 @@ export default {
 
     data () {
         return {
-            isOpenModalMessage: false,
+            isOpenModal: false,
             message: {}
         }
     },
@@ -97,11 +97,11 @@ export default {
         },
 
         openModal () {
-            this.isOpenModalMessage = true
+            this.isOpenModal = true
         },
 
         closeModal () {
-            this.isOpenModalMessage = false
+            this.isOpenModal = false
         },
 
         setMessage (obj) {

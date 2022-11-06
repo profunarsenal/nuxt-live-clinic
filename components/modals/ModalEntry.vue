@@ -1,9 +1,6 @@
 <template lang="pug">
-    v-modal(
-        :isOpenModal="isOpenModal"
-        @close="$emit('close')"
-    )
-        .modal-entry
+    v-modal(@close="$emit('close')")
+        .modal-entry(v-if="isShowForm")
             h4.title {{ $t("modalEntry.title") }}
 
             p.subtitle(v-html="$t('modalEntry.subtitle')")
@@ -52,11 +49,9 @@
 
             p.text-info {{ $t("modalEntry.text") }}
 
-            modal-message(
-                :isOpenModal="isOpenModalMessage"
-                :message="message"
-                @close="closeModal"
-            )
+        .message(v-else)
+            h6.message-title {{ message.title }}
+            p.message-text {{ message.text }}
 </template>
 
 <script>
@@ -84,20 +79,13 @@ export default {
         imask: IMaskDirective
     },
 
-    props: {
-        isOpenModal: {
-            type: Boolean,
-            default: false
-        }
-    },
-
     mixins: [validation, window],
 
     emits: ['close'],
 
     data () {
         return {
-            isOpenModalMessage: false,
+            isShowForm: true,
             message: {}
         }
     },
@@ -112,15 +100,6 @@ export default {
         }
     },
 
-    watch: {
-        isOpenModal (newValue) {
-            if (!newValue) {
-                this.resetForm()
-                this.clearErrors()
-            }
-        }
-    },
-
     methods: {
         async submit () {
             await this.checkForm()
@@ -132,29 +111,17 @@ export default {
                         phone: this.phone
                     })
 
-                    this.$emit('close')
-
                     this.setMessage(this.$t('messages.formSucces'))
-                    this.openModal()
+                    this.isShowForm = false
 
                     this.resetForm()
                     this.clearErrors()
                     this.isFormValid = false
                 } catch {
-                    this.$emit('close')
-                    
                     this.setMessage(this.$t('messages.formError'))
-                    this.openModal()
+                    this.isShowForm = false
                 }
             }
-        },
-
-        openModal () {
-            this.isOpenModalMessage = true
-        },
-
-        closeModal () {
-            this.isOpenModalMessage = false
         },
 
         setMessage (obj) {
@@ -200,6 +167,20 @@ export default {
     line-height: 24px
     color: $color-darkgray
     text-align: center
+
+.message
+    padding: 30px
+    text-align: center
+
+.message-title
+    display: block
+    margin-bottom: 10px
+    font-size: 24px
+    font-weight: 600
+
+.message-text
+    font-size: 18px
+    line-height: 140%
 
 @media (max-width: 1366px)
     .modal-entry

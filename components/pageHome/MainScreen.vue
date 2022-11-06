@@ -26,7 +26,7 @@
         figure.figure.figure-third
 
         modal-entry(
-            :isOpenModal="isOpenModal"
+            v-if="isOpenModal"
             @close="closeModal"
         )
 </template>

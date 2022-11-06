@@ -35,7 +35,7 @@
             ) {{ $t("buttons.more") }}
 
         modal-entry(
-            :isOpenModal="isOpenModal"
+            v-if="isOpenModal"
             @close="closeModal"
         )
 </template>

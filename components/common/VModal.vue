@@ -1,6 +1,6 @@
 <template lang="pug">
     Teleport(to=".wrapper")
-        .modal(v-show="isOpenModal")
+        .modal()
             .modal-back(
                 :style="paddingStyle"
                 @click="$emit('close')"
@@ -22,13 +22,6 @@ export default {
     components: {
         VIcon,
         Teleport
-    },
-
-    props: {
-        isOpenModal: {
-            type: Boolean,
-            default: false
-        }
     },
 
     emits: ['close'],
