@@ -13,7 +13,7 @@
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
-                                @click.prevent="goToSection('/', 'about-wrapper')"
+                                @click.prevent="goToSection('/', 'about')"
                             )   {{ $t("footer.navLinks.about") }}
                         li.navigation-item
                             a.navigation-link(
@@ -96,7 +96,7 @@ export default {
                     behavior: 'smooth'
                 })
             } else {
-                this.$router.push(path)
+                this.$router.push(`${path}?section=${section}`)
             }
         }
     }
