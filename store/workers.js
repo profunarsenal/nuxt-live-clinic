@@ -12,7 +12,7 @@ export const getters = {
     },
   
     worker: state => id => {
-         return state.workers.find(item => item.id === +id)
+        return state.workers.find(item => item.id === +id)
     }
 }
 
