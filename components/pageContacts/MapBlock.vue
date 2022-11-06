@@ -1,6 +1,7 @@
 <template lang="pug">
     div(:class="mapClasses")
         yandex-map(
+            :settings="settings"
             :coords="coords"
             :zoom="15"
             style="width: 100%; height: 100%"
@@ -25,13 +26,32 @@ export default {
 
     data () {
         return {
-            coords: [59.942034, 30.368647]
+            coords: [59.942034, 30.368647],
+            settings: {
+                apiKey: '',
+                lang: 'ru_RU',
+                coordorder: 'latlong',
+                enterprise: false,
+                version: '2.1'
+            }
         }
     },
 
     computed: {
         mapClasses () {
             return ['map-block', { reverse: this.isReverse }]
+        },
+
+        lang () {
+            return this.$i18n.locale
+        }
+    },
+
+    created () {
+        if (this.$i18n.locale === 'ru') {
+            this.settings.lang = 'ru_RU'
+        } else {
+            this.settings.lang = 'en_US'
         }
     }
 }
