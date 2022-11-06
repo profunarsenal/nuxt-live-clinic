@@ -126,9 +126,9 @@ export default {
 
         switchLang () {
             if (this.$i18n.locale === 'ru') {
-                localStorage.setItem('lang', 'en')
+                this.$cookies.set('i18n_redirected', 'en')
             } else {
-                localStorage.setItem('lang', 'ru')
+                this.$cookies.set('i18n_redirected', 'ru')
             }
 
             window.location.reload()
