@@ -50,7 +50,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['@nuxtjs/i18n', i18n],
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    'cookie-universal-nuxt'
   ],
 
   styleResources: {
@@ -69,7 +70,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: `https://liveclinic63-default-rtdb.firebaseio.com/${i18n.defaultLocale}`
+    baseURL: ''
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
