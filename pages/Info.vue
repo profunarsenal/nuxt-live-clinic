@@ -39,13 +39,29 @@ export default {
         }
     },
 
-    mounted () {
+    async mounted () {
         this.setTitle()
+
+        if (this.$route.query.section) {
+            await this.scrollToSection()
+        }
     },
 
     methods: {
         setTitle () {
             document.title = this.$t('titles.info')
+        },
+
+        scrollToSection () {
+            setTimeout(() => {
+                const section = document.querySelector(`.${this.$route.query.section}`)
+                const position = section.getBoundingClientRect().top
+
+                window.scrollTo({
+                    top: position,
+                    behavior: 'smooth'
+                })
+            })
         }
     }
 }

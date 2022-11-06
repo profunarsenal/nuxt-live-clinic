@@ -45,6 +45,32 @@ export default Vue.extend({
         workers () {
             return this.$store.getters['workers/workers']
         }
+    },
+
+    async mounted () {
+        this.setTitle()
+        
+        if (this.$route.query.section) {
+            await this.scrollToSection()
+        }
+    },
+
+    methods: {
+        scrollToSection () {
+            setTimeout(() => {
+                const section = document.querySelector(`.${this.$route.query.section}`)
+                const position = section.getBoundingClientRect().top
+
+                window.scrollTo({
+                    top: position,
+                    behavior: 'smooth'
+                })
+            })
+        },
+
+        setTitle () {
+            document.title = 'liveclinic'
+        }
     }
 })
 </script>
