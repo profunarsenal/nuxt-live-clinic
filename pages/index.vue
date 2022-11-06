@@ -41,6 +41,12 @@ export default Vue.extend({
         }
     },
 
+    head () {
+        return {
+            title: 'liveclinic'
+        }
+    },
+
     computed: {
         workers () {
             return this.$store.getters['workers/workers']
@@ -48,8 +54,6 @@ export default Vue.extend({
     },
 
     async mounted () {
-        this.setTitle()
-        
         if (this.$route.query.section) {
             await this.scrollToSection()
         }
@@ -66,10 +70,6 @@ export default Vue.extend({
                     behavior: 'smooth'
                 })
             })
-        },
-
-        setTitle () {
-            document.title = 'liveclinic'
         }
     }
 })

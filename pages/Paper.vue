@@ -25,6 +25,12 @@ export default {
         }
     },
 
+    head () {
+        return {
+            title: this.article?.title || this.$t('titles.article')
+        }
+    },
+
     computed: {
         otherArticles () {
             return this.$store.getters['articles/otherArticles'](this.$route.query.id)
@@ -41,17 +47,6 @@ export default {
                 top: 0,
                 behavior: 'smooth'
             })
-        }
-    },
-
-    mounted () {
-        this.setTitle()
-    },
-
-    methods: {
-        setTitle () {
-            const title = this.article?.title || this.$t('titles.article')
-            document.title = title
         }
     }
 }

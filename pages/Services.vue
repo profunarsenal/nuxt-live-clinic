@@ -22,19 +22,15 @@ export default {
         }
     },
 
-    computed: {
-        services () {
-            return this.$store.getters['services/services']
+    head () {
+        return {
+            title: this.$t('titles.services')
         }
     },
 
-    mounted () {
-        this.setTitle()
-    },
-
-    methods: {
-        setTitle () {
-            document.title = this.$t('titles.services')
+    computed: {
+        services () {
+            return this.$store.getters['services/services']
         }
     }
 }

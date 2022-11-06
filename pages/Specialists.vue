@@ -22,19 +22,15 @@ export default {
         }
     },
 
-    computed: {
-        workers () {
-            return this.$store.getters['workers/workers']
+    head () {
+        return {
+            title: this.$t('titles.specialists')
         }
     },
 
-    mounted () {
-        this.setTitle()
-    },
-
-    methods: {
-        setTitle () {
-            document.title = this.$t('titles.specialists')
+    computed: {
+        workers () {
+            return this.$store.getters['workers/workers']
         }
     }
 }

@@ -32,6 +32,12 @@ export default {
         }
     },
 
+    head () {
+        return {
+            title: this.worker?.name || this.$t('titles.specialist')
+        }
+    },
+
     computed: {
         otherWorkers () {
             return this.$store.getters['workers/otherWorkers'](this.$route.query.id)
@@ -48,17 +54,6 @@ export default {
                 top: 0,
                 behavior: 'smooth'
             })
-        }
-    },
-
-    mounted () {
-        this.setTitle()
-    },
-
-    methods: {
-        setTitle () {
-            const title = this.worker?.name || this.$t('titles.specialist')
-            document.title = title
         }
     }
 }

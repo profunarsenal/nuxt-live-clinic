@@ -25,15 +25,12 @@ export default {
         SectionContacts
     },
 
-    mounted () {
-        this.setTitle()
-    },
-
-    methods: {
-        setTitle () {
-            document.title = this.$t('titles.contacts')
+    head () {
+        return {
+            title: this.$t('titles.contacts')
         }
     }
+
 }
 </script>
 
