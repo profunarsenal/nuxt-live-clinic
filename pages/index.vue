@@ -12,6 +12,7 @@
 
 <script>
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 import MainScreen from '@/components/pageHome/MainScreen'
 import SectionAbout from '@/components/pageHome/SectionAbout'
 import SectionProfile from '@/components/pageHome/SectionProfile'
@@ -36,9 +37,7 @@ export default Vue.extend({
     },
 
     async fetch ({ store }) {
-        if (!store.getters['workers/workers'].length) {
-            await store.dispatch('workers/getWorkers')
-        }
+        await store.dispatch('cache/cacheRequest', 'workers')
     },
 
     head () {
@@ -48,9 +47,7 @@ export default Vue.extend({
     },
 
     computed: {
-        workers () {
-            return this.$store.getters['workers/workers']
-        }
+        ...mapGetters('cache', ['workers'])
     },
 
     mounted () {

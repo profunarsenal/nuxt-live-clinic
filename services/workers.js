@@ -3,7 +3,7 @@ export default class Workers {
         this.axios = axios
     }
 
-    async getWorkers () {
+    async getData () {
         const { data } = await this.axios.get('/workers.json')
         return data
     }

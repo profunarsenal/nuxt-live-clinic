@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SectionSpecialist from '@/components/pageSpecialist/SectionSpecialist'
 import SectionContacts from '@/components/pageContacts/SectionContacts'
 import CardWorker from '@/components/pageSpecialists/CardWorker'
@@ -27,9 +28,7 @@ export default {
     },
 
     async fetch ({ store }) {
-        if (!store.getters['workers/workers'].length) {
-            await store.dispatch('workers/getWorkers')
-        }
+        await store.dispatch('cache/cacheRequest', 'workers')
     },
 
     head () {
@@ -39,12 +38,14 @@ export default {
     },
 
     computed: {
+        ...mapGetters('cache', ['workers']),
+
         otherWorkers () {
-            return this.$store.getters['workers/otherWorkers'](this.$route.query.id)
+            return this.workers.filter(item => item.id !== +this.$route.query.id)
         },
 
         worker () {
-            return this.$store.getters['workers/worker'](this.$route.query.id)
+            return this.workers.find(item => item.id === +this.$route.query.id)
         }
     },
 

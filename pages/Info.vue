@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SectionQuestions from '@/components/pageInfo/SectionQuestions'
 import SectionArticles from '@/components/pageInfo/SectionArticles'
 import SectionContacts from '@/components/pageContacts/SectionContacts'
@@ -20,13 +21,8 @@ export default {
     },
 
     async fetch ({ store }) {
-        if (!store.getters['spollers/spollers'].length) {
-            await store.dispatch('spollers/getSpollers')
-        }
-
-        if (!store.getters['articles/articles'].length) {
-            await store.dispatch('articles/getArticles')
-        }
+        await store.dispatch('cache/cacheRequest', 'spollers')
+        await store.dispatch('cache/cacheRequest', 'articles')
     },
 
     head () {
@@ -36,13 +32,7 @@ export default {
     },
 
     computed: {
-        spollers () {
-            return this.$store.getters['spollers/spollers']
-        },
-
-        articles () {
-            return this.$store.getters['articles/articles']
-        }
+        ...mapGetters('cache', ['spollers', 'articles'])
     },
 
     mounted () {

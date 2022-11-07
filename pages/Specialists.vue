@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SectionWorkers from '@/components/pageSpecialists/SectionWorkers'
 import SectionContacts from '@/components/pageContacts/SectionContacts'
 
@@ -17,9 +18,7 @@ export default {
     },
 
     async fetch ({ store }) {
-        if (!store.getters['workers/workers'].length) {
-            await store.dispatch('workers/getWorkers')
-        }
+        await store.dispatch('cache/cacheRequest', 'workers')
     },
 
     head () {
@@ -29,9 +28,7 @@ export default {
     },
 
     computed: {
-        workers () {
-            return this.$store.getters['workers/workers']
-        }
+        ...mapGetters('cache', ['workers'])
     }
 }
 </script>

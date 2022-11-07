@@ -3,7 +3,7 @@ export default class Spollers {
         this.axios = axios
     }
 
-    async getSpollers () {
+    async getData () {
         const { data } = await this.axios.get('/spollers.json')
         return data
     }

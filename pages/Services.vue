@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SectionPrice from '@/components/pageServices/SectionPrice'
 import SectionContacts from '@/components/pageContacts/SectionContacts'
 
@@ -17,9 +18,7 @@ export default {
     },
 
     async fetch ({ store }) {
-        if (!store.getters['services/services'].length) {
-            await store.dispatch('services/getServices')
-        }
+        await store.dispatch('cache/cacheRequest', 'services')
     },
 
     head () {
@@ -29,9 +28,7 @@ export default {
     },
 
     computed: {
-        services () {
-            return this.$store.getters['services/services']
-        }
+        ...mapGetters('cache', ['services'])
     }
 }
 </script>

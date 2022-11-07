@@ -3,7 +3,7 @@ export default class Services {
         this.axios = axios
     }
 
-    async getServices () {
+    async getData () {
         const { data } = await this.axios.get('/services.json')
         return data
     }

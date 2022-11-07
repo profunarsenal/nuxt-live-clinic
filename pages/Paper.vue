@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SectionArticle from '@/components/pagePaper/SectionArticle'
 import SectionContacts from '@/components/pageContacts/SectionContacts'
 import ArticlesSlider from '@/components/pagePaper/ArticlesSlider'
@@ -20,9 +21,7 @@ export default {
     },
 
     async fetch ({ store }) {
-        if (!store.getters['articles/articles'].length) {
-            await store.dispatch('articles/getArticles')
-        }
+        await store.dispatch('cache/cacheRequest', 'articles')
     },
 
     head () {
@@ -32,12 +31,14 @@ export default {
     },
 
     computed: {
+        ...mapGetters('cache', ['articles']),
+
         otherArticles () {
-            return this.$store.getters['articles/otherArticles'](this.$route.query.id)
+            return this.articles.filter(item => item.id !== +this.$route.query.id)
         },
 
         article () {
-            return this.$store.getters['articles/article'](this.$route.query.id)
+            return this.articles.find(item => item.id === +this.$route.query.id)
         }
     },
 
