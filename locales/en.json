@@ -64,7 +64,9 @@
     "whatsapp": "Contact via WhatsApp",
     "telegram": "Contact via Telegram",
     "whatsappMobile": "Write to WhatsApp",
-    "telegramMobile": "Write to Telegram"
+    "telegramMobile": "Write to Telegram",
+    "back": "Back",
+    "main": "Main page"
   },
   "placeholders": {
     "name": "Name",

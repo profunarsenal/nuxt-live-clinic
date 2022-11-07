@@ -64,7 +64,9 @@
     "whatsapp": "Связаться через WhatsApp",
     "whatsappMobile": "Написать в WhatsApp",
     "telegramMobile": "Написать в Telegram",
-    "telegram": "Связаться через Telegram"
+    "telegram": "Связаться через Telegram",
+    "back": "Назад",
+    "main": "Главная страница"
   },
   "placeholders": {
     "name": "Имя",
