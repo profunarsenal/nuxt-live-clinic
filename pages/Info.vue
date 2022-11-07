@@ -7,6 +7,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { scrollToSection } from '@/helpers/scrollToSection'
 import SectionQuestions from '@/components/pageInfo/SectionQuestions'
 import SectionArticles from '@/components/pageInfo/SectionArticles'
 import SectionContacts from '@/components/pageContacts/SectionContacts'
@@ -37,21 +38,7 @@ export default {
 
     mounted () {
         if (this.$route.query.section) {
-            this.scrollToSection()
-        }
-    },
-
-    methods: {
-        scrollToSection () {
-            setTimeout(() => {
-                const section = document.querySelector(`.${this.$route.query.section}`)
-                const position = section.getBoundingClientRect().top
-
-                window.scrollTo({
-                    top: position,
-                    behavior: 'smooth'
-                })
-            })
+            scrollToSection(this.$route.query.section)
         }
     }
 }

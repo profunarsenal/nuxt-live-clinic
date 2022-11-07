@@ -13,6 +13,7 @@
 <script>
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
+import { scrollToSection } from '@/helpers/scrollToSection'
 import MainScreen from '@/components/pageHome/MainScreen'
 import SectionAbout from '@/components/pageHome/SectionAbout'
 import SectionProfile from '@/components/pageHome/SectionProfile'
@@ -52,21 +53,7 @@ export default Vue.extend({
 
     mounted () {
         if (this.$route.query.section) {
-            this.scrollToSection()
-        }
-    },
-
-    methods: {
-        scrollToSection () {
-            setTimeout(() => {
-                const section = document.querySelector(`.${this.$route.query.section}`)
-                const position = section.getBoundingClientRect().top
-
-                window.scrollTo({
-                    top: position,
-                    behavior: 'smooth'
-                })
-            })
+            scrollToSection(this.$route.query.section)
         }
     }
 })
