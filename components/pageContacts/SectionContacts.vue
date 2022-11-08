@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(:class="contactsClasses")
+    section(:class="contactsClasses")
         h2.section-title {{ $t("contacts.titleSection") }}
 
         .section-wrapper

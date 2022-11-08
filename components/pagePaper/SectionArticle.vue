@@ -1,5 +1,5 @@
 <template lang="pug">
-    .section-article(v-if="article")
+    section.article(v-if="article")
         v-crumbs(
             link="/info"
             :lastPage="$t('articles.crumbs')"
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.section-article
+.article
     display: flex
     flex-direction: column
     align-items: flex-start
@@ -128,11 +128,11 @@ export default {
     font-size: 24px
 
 @media (max-width: 1366px)
-    .section-article
+    .article
         padding: 40px 0 100px 0
 
 @media (max-width: 767px)
-    .section-article
+    .article
         padding: 0 0 72px 0
         align-items: center
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-    .price(v-if="services.length")
+    section.price(v-if="services.length")
         .price-header
             h2.title {{ $t("services.title") }}
             img.image(

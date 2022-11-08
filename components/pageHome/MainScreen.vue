@@ -1,5 +1,5 @@
 <template lang="pug">
-    .main-screen
+    section.main-screen
         .container
             .section-wrapper
                 .image-wrapper

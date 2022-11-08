@@ -1,5 +1,5 @@
 <template lang="pug">
-    .questions(v-if="spollers.length")
+    section.questions(v-if="spollers.length")
         .questions-header
             h2.questions-title {{ $t("questions.title") }}
 

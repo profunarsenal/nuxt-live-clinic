@@ -1,5 +1,5 @@
 <template lang="pug">
-    .section-specialist(v-if="worker")
+    section.specialist(v-if="worker")
         v-crumbs(
             link="/specialists"
             :lastPage="$t('specialist.crumbs')"
@@ -83,7 +83,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.section-specialist
+.specialist
     padding: 88px 0 32px 0
 
 .specialist-title
@@ -174,7 +174,7 @@ export default {
     font-size: 24px
 
 @media (max-width: 1366px)
-    .section-specialist
+    .specialist
         padding: 32px 0
 
 @media (max-width: 992px)
@@ -182,7 +182,7 @@ export default {
         margin-bottom: 40px
 
 @media (max-width: 767px)
-    .section-specialist
+    .specialist
         padding: 0
 
     .specialist-title

@@ -1,5 +1,5 @@
 <template lang="pug">
-    .articles(v-if="articles.length")
+    section.articles(v-if="articles.length")
         .articles-header
             h2.articles-title {{ $t("articles.title") }}
 

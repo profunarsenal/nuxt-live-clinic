@@ -1,5 +1,5 @@
 <template lang="pug">
-    .methods
+    section.methods
         .container
             .methods-wrapper
                 h2.methods-title

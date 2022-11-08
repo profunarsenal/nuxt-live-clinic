@@ -1,5 +1,5 @@
 <template lang="pug">
-    .container
+    section.solutions
         .solutions-wrapper
             h2.solutions-title {{ $t("solutions.title") }}
 
@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.solutions
+    @extend .container
+
 .solutions-title
     @extend .title
     margin-bottom: 72px

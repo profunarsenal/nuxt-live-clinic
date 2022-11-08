@@ -1,5 +1,5 @@
 <template lang="pug">
-    .workers(v-if="workers.length")
+    section.workers(v-if="workers.length")
         .workers-header
             h2.title(v-html="$t('specialists.title')")
             img.image(

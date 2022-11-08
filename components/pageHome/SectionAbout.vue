@@ -1,6 +1,6 @@
 <template lang="pug">
-    .container
-        .about
+    section.about
+        .about-wrapper
             .content
                 h2.about-title {{ $t("about.title") }}
                 p.about-text {{ $t("about.firstText") }}
@@ -26,6 +26,9 @@ export default {
 
 <style lang="sass" scoped>
 .about
+    @extend .container
+
+.about-wrapper
     padding: 150px 0
 
 .content
@@ -62,11 +65,11 @@ export default {
     object-fit: cover
 
 @media(max-width: 992px)
-    .about
+    .about-wrapper
         padding: 100px 0
 
 @media (max-width: 767px)
-    .about
+    .about-wrapper
         padding: 72px 0
 
     .content

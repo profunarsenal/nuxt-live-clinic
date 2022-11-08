@@ -1,5 +1,5 @@
 <template lang="pug">
-    .profile
+    section.profile
         .container
             .profile-wrapper
                 h2.profile-title {{ $t("profile.title") }}

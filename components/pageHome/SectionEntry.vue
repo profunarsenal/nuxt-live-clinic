@@ -1,5 +1,5 @@
 <template lang="pug">
-    .entry
+    section.entry
         .container
             .entry-wrapper
                 .content
