@@ -1,10 +1,11 @@
 <template lang="pug">
-    section(:class="contactsClasses")
-        h2.section-title {{ $t("contacts.titleSection") }}
+    client-only
+        section(:class="contactsClasses")
+            h2.section-title {{ $t("contacts.titleSection") }}
 
-        .section-wrapper
-            contacts-block(:isReverse="isReverse")
-            map-block(:isReverse="isReverse")
+            .section-wrapper
+                contacts-block(:isReverse="isReverse")
+                map-block(:isReverse="isReverse")
 </template>
 
 <script>

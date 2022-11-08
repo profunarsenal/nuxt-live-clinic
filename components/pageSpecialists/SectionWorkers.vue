@@ -1,21 +1,22 @@
 <template lang="pug">
-    section.workers(v-if="workers.length")
-        .workers-header
-            h2.title(v-html="$t('specialists.title')")
-            img.image(
-                src="@/assets/images/workers.svg"
-                alt="illustration"
-            )
-            v-icon.workers-icon(icon="arrow")
+    client-only
+        section.workers(v-if="workers.length")
+            .workers-header
+                h2.title(v-html="$t('specialists.title')")
+                img.image(
+                    src="@/assets/images/workers.svg"
+                    alt="illustration"
+                )
+                v-icon.workers-icon(icon="arrow")
 
-        ul.workers-cards
-            card-worker(
-                v-for="card in workers"
-                :key="card.id"
-                :worker="card"
-            )
+            ul.workers-cards
+                card-worker(
+                    v-for="card in workers"
+                    :key="card.id"
+                    :worker="card"
+                )
 
-    .error-message(v-else) {{ $t("specialists.error") }}
+        .error-message(v-else) {{ $t("specialists.error") }}
 </template>
 
 <script>
