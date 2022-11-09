@@ -14,7 +14,7 @@
         v-button.contacts-button(
             color="primary"
             @click="openModal"
-        )   {{ $t("buttons.enroll") }}
+        )   {{ $t("buttonEnroll") }}
 
         modal-entry(
             v-if="isOpenModal"
@@ -45,7 +45,7 @@ export default {
 
     data () {
         return {
-            contacts: this.$t('contacts.items'),
+            contacts: this.$t('contactsItems'),
             isOpenModal: false
         }
     },

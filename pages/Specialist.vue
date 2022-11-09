@@ -4,7 +4,7 @@
             v-if="worker"
             :worker="worker"
         )
-        .error-message(v-else) {{ $t("specialist.error") }}
+        .error-message(v-else) {{ $t("specialistError") }}
 
         ul.other-specialists
             card-worker(
@@ -40,7 +40,7 @@ export default {
 
     head () {
         return {
-            title: this.worker?.name || this.$t('titles.specialist')
+            title: this.worker?.name || this.$t('specialist')
         }
     },
 

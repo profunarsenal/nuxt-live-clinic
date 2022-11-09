@@ -1,6 +1,6 @@
 <template lang="pug">
     v-modal(@close="$emit('close')")
-        .modal-message(v-if="message")
+        .modal-message
             h6.message-title {{ message.title }}
             p.message-text {{ message.text }}
 </template>

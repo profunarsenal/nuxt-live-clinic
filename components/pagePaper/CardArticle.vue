@@ -12,7 +12,7 @@
 
         .card-time
             span {{ article.date }} • {{ article.time }}
-            span  {{ $tc("minutes", defineMinutes) }} {{ $t("articles.read") }}
+            span  {{ $tc("minutes", defineMinutes) }} {{ $t("read") }}
 </template>
 
 <script>

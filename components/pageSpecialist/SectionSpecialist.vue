@@ -2,7 +2,7 @@
     section.specialist
         v-crumbs(
             link="/specialists"
-            :lastPage="$t('specialist.crumbs')"
+            :lastPage="$t('specialistCrumbs')"
             :currentPage="worker.name"
         )
 
@@ -15,7 +15,7 @@
                     alt="photo"
                 )
                 .badges
-                    span.badge {{ $t("specialists.badge") }} {{ worker.experience }}
+                    span.badge {{ $t("experience") }} {{ worker.experience }}
                     span.badge {{ worker.category }}
             .info
                 ul.info-list
@@ -31,7 +31,7 @@
                 v-button.info-button(
                     color="primary"
                     @click="openModal"
-                )   {{ $t("buttons.enroll") }}
+                )   {{ $t("buttonEnroll") }}
 
                 modal-entry(
                     v-if="isOpenModal"

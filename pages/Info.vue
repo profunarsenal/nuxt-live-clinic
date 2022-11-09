@@ -4,13 +4,13 @@
             v-if="spollers.length"
             :spollers="spollers"
         )
-        .error-message(v-else) {{ $t("questions.error") }}
+        .error-message(v-else) {{ $t("questionsError") }}
 
         section-articles(
             v-if="articles.length"
             :articles="articles"
         )
-        .error-message(v-else) {{ $t("articles.error") }}
+        .error-message(v-else) {{ $t("articlesError") }}
 
         section-contacts
 </template>
@@ -44,7 +44,7 @@ export default {
 
     head () {
         return {
-            title: this.$t('titles.info')
+            title: this.$t('info')
         }
     },
 

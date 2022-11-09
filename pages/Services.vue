@@ -4,7 +4,7 @@
             v-if="services.length"
             :services="services"
         )
-        .error-message(v-else) {{ $t("services.error") }}
+        .error-message(v-else) {{ $t("servicesError") }}
 
         section-contacts
 </template>
@@ -31,7 +31,7 @@ export default {
 
     head () {
         return {
-            title: this.$t('titles.services')
+            title: this.$t('services')
         }
     },
 

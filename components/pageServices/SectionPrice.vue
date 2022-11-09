@@ -1,7 +1,7 @@
 <template lang="pug">
     section.price
         .price-header
-            h2.title {{ $t("services.title") }}
+            h2.title {{ $t("services") }}
             img.image(
                 src="@/assets/images/price.svg"
                 alt="illustration"

@@ -1,6 +1,6 @@
 <template lang="pug">
         section(:class="contactsClasses")
-            h2.section-title {{ $t("contacts.titleSection") }}
+            h2.section-title {{ $t("contactsTitle") }}
 
             .section-wrapper
                 contacts-block(:isReverse="isReverse")

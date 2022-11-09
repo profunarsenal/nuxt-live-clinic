@@ -18,7 +18,7 @@ export default {
     methods: {
         validateName (event) {
             if (!event) {
-                this.errors.name = this.$t('validate.name')
+                this.errors.name = this.$t('validateRequired')
             } else {
                 this.errors.name = ''
             }
@@ -26,7 +26,7 @@ export default {
 
         validatePhone (event) {
             if (!event) {
-                this.errors.phone = this.$t('validate.name')
+                this.errors.phone = this.$t('validatePhone')
             } else {
                 this.errors.phone = ''
             }
@@ -35,7 +35,7 @@ export default {
         validatePhoneNumber (event) {
             // eslint-disable-next-line
             if (!/^[\d\+][\d\(\)\ -]{16,18}\d$/.test(event)) {
-                this.errors.phone = this.$t('validate.phone')
+                this.errors.phone = this.$t('validatePhone')
             } else {
                 this.errors.phone = ''
             }
@@ -70,13 +70,13 @@ export default {
 
         checkForm () {
             if (this.name === '') {
-                this.errors.name = this.$t('validate.name')
+                this.errors.name = this.$t('validateRequired')
             } else {
                 this.isFormValid = true
             }
 
             if (this.phone === '') {
-                this.errors.phone = this.$t('validate.name')
+                this.errors.phone = this.$t('validateRequired')
                 this.isFormValid = false
             } else {
                 this.isFormValid = true
@@ -84,7 +84,7 @@ export default {
 
             // eslint-disable-next-line
             if (!/^[\d\+][\d\(\)\ -]{16,18}\d$/.test(this.phone)) {
-                this.errors.phone = this.$t('validate.phone')
+                this.errors.phone = this.$t('validatePhone')
                 this.isFormValid = false
             } else {
                 this.isFormValid = true

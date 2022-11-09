@@ -2,9 +2,9 @@
     section.about
         .about-wrapper
             .content
-                h2.about-title {{ $t("about.title") }}
-                p.about-text {{ $t("about.firstText") }}
-                p.about-text {{ $t("about.secondText") }}
+                h2.about-title {{ $t("aboutTitle") }}
+                p.about-text {{ $t("aboutFirstSubtitle") }}
+                p.about-text {{ $t("aboutSecondSubtitle") }}
                 v-icon.about-icon(icon="arrow")
             img.image(
                 src="@/assets/images/about.jpg"

@@ -4,7 +4,7 @@
             v-if="article"
             :article="article"
         )
-        .error-message(v-else) {{ $t("article.error") }}
+        .error-message(v-else) {{ $t("articleError") }}
 
         articles-slider(:articles="otherArticles")
         section-contacts
@@ -34,7 +34,7 @@ export default {
 
     head () {
         return {
-            title: this.article?.title || this.$t('titles.article')
+            title: this.article?.title || this.$t('article')
         }
     },
 

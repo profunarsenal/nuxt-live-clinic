@@ -1,7 +1,7 @@
 <template lang="pug">
     section.workers
         .workers-header
-            h2.title(v-html="$t('specialists.title')")
+            h2.title(v-html="$t('specialists')")
             img.image(
                 src="@/assets/images/workers.svg"
                 alt="illustration"

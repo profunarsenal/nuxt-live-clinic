@@ -1,6 +1,6 @@
-export const scrollToSection = value => {
+export const scrollToSection = elem => {
     setTimeout(() => {
-        const section = document.querySelector(`.${value}`)
+        const section = document.querySelector(`.${elem}`)
         const position = section.getBoundingClientRect().top
 
         window.scrollTo({

@@ -8,7 +8,7 @@
         v-button.button-error(
             color="primary"
             @click="$router.push('/')"
-        ) {{ $t("buttons.main") }}
+        ) {{ $t("buttonMain") }}
 </template>
 
 <script>

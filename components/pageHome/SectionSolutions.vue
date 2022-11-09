@@ -1,7 +1,7 @@
 <template lang="pug">
     section.solutions
         .solutions-wrapper
-            h2.solutions-title {{ $t("solutions.title") }}
+            h2.solutions-title {{ $t("solutionsTitle") }}
 
             .solutions-grid
                 .director
@@ -10,8 +10,8 @@
                         alt="avatar"
                     )
                     v-icon.solutions-icon(icon="arrow")
-                    span.director-name {{ $t("solutions.name") }}
-                    span.director-position {{ $t("solutions.position") }}
+                    span.director-name {{ $t("director") }}
+                    span.director-position {{ $t("position") }}
                 
                 ul.solutions-items
                     li.solutions-item(
@@ -19,7 +19,7 @@
                         :key="item.text"
                     )
                         v-icon.check(icon="check")
-                        p.description(v-html="item.text")
+                        p.description(v-html="item")
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
 
     data () {
         return {
-            solutions: this.$t('solutions.items')
+            solutions: this.$t('solutionsItems')
         }
     }
 }

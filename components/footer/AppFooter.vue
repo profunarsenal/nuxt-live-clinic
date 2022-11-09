@@ -14,37 +14,37 @@
                             a.navigation-link(
                                 href="#"
                                 @click.prevent="goToSection('/', 'about')"
-                            )   {{ $t("footer.navLinks.about") }}
+                            )   {{ $t("about") }}
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
                                 @click.prevent="goToPage('/info')"
-                            )   {{ $t("footer.navLinks.questions") }}
+                            )   {{ $t("questions") }}
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
                                 @click.prevent="goToPage('/services')"
-                            )   {{ $t("footer.navLinks.services") }}
+                            )   {{ $t("services") }}
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
                                 @click.prevent="goToSection('/info', 'articles')"
-                            )   {{ $t("footer.navLinks.articles") }}
+                            )   {{ $t("articles") }}
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
                                 @click.prevent="goToPage('/specialists')"
-                            )   {{ $t("footer.navLinks.specialists") }}
+                            )   {{ $t("specialists") }}
                         li.navigation-item
                             a.navigation-link(
                                 href="#"
                                 @click.prevent="goToPage('/contacts')"
-                            )   {{ $t("footer.navLinks.contacts") }}
+                            )   {{ $t("contacts") }}
 
                 .contacts
                     .contacts-info
                         p.contacts-call +7 812 606-76-69
-                        span.contacts-text {{ $t("footer.addres") }}
+                        span.contacts-text {{ $t("addres") }}
                         span.contacts-text info@liveclinic.ru
 
                     .social
@@ -57,15 +57,15 @@
 
             .footer-bottom
                 .copy
-                    span.copy-item {{ $t("footer.copy.item1") }}
-                    span.copy-item {{ $t("footer.copy.item2") }}
+                    span.copy-item {{ $t("copy") }}
+                    span.copy-item {{ $t("requisites") }}
                 .documents
                     a.documents-link(href="#")
                         v-icon.documents-icon(icon="arrow")
-                        span.documents-title {{ $t("footer.documents.doc1") }}
+                        span.documents-title {{ $t("policy") }}
                     a.documents-link(href="#")
                         v-icon.documents-icon(icon="arrow")
-                        span.documents-title {{ $t("footer.documents.doc2") }}
+                        span.documents-title {{ $t("offer") }}
 </template>
 
 <script>

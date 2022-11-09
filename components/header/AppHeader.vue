@@ -16,36 +16,36 @@
                             to="/"
                             active-class='active'
                             exact
-                        ) {{ $t("header.navLinks.main") }}
+                        ) {{ $t("main") }}
 
                     li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/services"
                             active-class='active'
-                        ) {{ $t("header.navLinks.services") }}
+                        ) {{ $t("services") }}
 
                     li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/specialists"
                             active-class='active'
-                        ) {{ $t("header.navLinks.specialists") }}
+                        ) {{ $t("specialists") }}
 
                     li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/info"
                             active-class='active'
-                        ) {{ $t("header.navLinks.info") }}
+                        ) {{ $t("info") }}
 
                     li.navigation-item(@click="closeMenu")
                         nuxt-link.navigation-link(
                             to="/contacts"
                             active-class='active'
-                        ) {{ $t("header.navLinks.contacts") }}
+                        ) {{ $t("contacts") }}
 
             .contacts
                 .contacts-call
                     span.contacts-title +7 812 606-76-69
-                    span.contacts-text {{ $t("contacts.phoneText") }}
+                    span.contacts-text {{ $t("callText") }}
                 a.contacts-link(href="#")
                     v-icon.contacts-icon.icon-whatsapp(
                         icon="whatsapp"

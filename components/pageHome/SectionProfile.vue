@@ -2,7 +2,7 @@
     section.profile
         .container
             .profile-wrapper
-                h2.profile-title {{ $t("profile.title") }}
+                h2.profile-title {{ $t("profileTitle") }}
 
                 v-icon.profile-icon(icon="arrow")
 
@@ -34,7 +34,7 @@ export default {
 
     data () {
         return {
-            works: this.$t('profile.items')
+            works: this.$t('profileItems')
         }
     }
 }

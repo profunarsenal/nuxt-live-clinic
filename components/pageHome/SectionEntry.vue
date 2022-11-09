@@ -3,8 +3,8 @@
         .container
             .entry-wrapper
                 .content
-                    h2.entry-title(v-html="$t('entry.title')")
-                    p.entry-subtitle(v-html="$t('entry.subtitle')")
+                    h2.entry-title(v-html="$t('entryTitle')")
+                    p.entry-subtitle(v-html="$t('entrySubtitle')")
                     v-icon.entry-icon(icon="arrow")
 
                 form.form(@submit.prevent="submit")
@@ -12,7 +12,7 @@
                         v-model="name"
                         id="name"
                         icon="user"
-                        :placeholder="$t('placeholders.name')"
+                        :placeholder="$t('name')"
                         :error="errors.name"
                         @input="validateName"
                         @onBlur="editName"
@@ -24,7 +24,7 @@
                         icon="phone"
                         id="phone"
                         :error="errors.phone"
-                        :placeholder="$t('placeholders.phone')"
+                        :placeholder="$t('phone')"
                         maxlength="18"
                         @input="validatePhone"
                         @onBlur="validatePhoneNumber"
@@ -32,7 +32,7 @@
                         @onFocus="addTemplate"
                     )
 
-                    v-button.form-button(color="primary") {{ $t("buttons.enroll") }}
+                    v-button.form-button(color="primary") {{ $t("buttonEnroll") }}
     
                     modal-message(
                         v-if="isOpenModal"
@@ -83,14 +83,20 @@ export default {
                         phone: this.phone
                     })
 
-                    this.setMessage(this.$t('messages.formSucces'))
+                    this.setMessage({
+                        title: this.$t('thanks'),
+                        text: this.$t('answerSucces')
+                    })
                     this.openModal()
 
                     this.resetForm()
                     this.clearErrors()
                     this.isFormValid = false
                 } catch {
-                    this.setMessage(this.$t('messages.formError'))
+                    this.setMessage({
+                        title: this.$t('error'),
+                        text: this.$t('answerError')
+                    })
                     this.openModal()
                 }
             }

@@ -9,17 +9,17 @@
                     )
 
                 .content
-                    h1.title(v-html="$t('title.main')")
+                    h1.title(v-html="$t('mainTitle')")
 
                     .buttons
                         v-button(
                             color="primary"
                             @click="openModal"
-                        ) {{ $t("buttons.enroll") }}
+                        ) {{ $t("buttonEnroll") }}
                         v-button(
                             color="secondary"
                             @click="$router.push('/specialists')"
-                        ) {{ $t("buttons.change") }}
+                        ) {{ $t("buttonChange") }}
 
         figure.figure.figure-first
         figure.figure.figure-second

@@ -1,9 +1,9 @@
 <template lang="pug">
     section.questions
         .questions-header
-            h2.questions-title {{ $t("questions.title") }}
+            h2.questions-title {{ $t("questions") }}
 
-            p.support(v-html="$t('questions.subtitle')")
+            p.support(v-html="$t('questionSubtitle')")
 
             .social
                 a.social-link(href="#")

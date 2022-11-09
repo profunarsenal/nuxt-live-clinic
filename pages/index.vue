@@ -10,7 +10,7 @@
         v-if="workers.length"
         :workers="workers"
     )
-    .error-message(v-else) {{ $t("specialists.error") }}
+    .error-message(v-else) {{ $t("specialistsError") }}
 
     section-entry
     section-contacts.section

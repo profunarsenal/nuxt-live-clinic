@@ -3,8 +3,8 @@
         .container
             .methods-wrapper
                 h2.methods-title
-                    span.main-title {{ $t("methods.title") }}
-                    span.subtitle {{ $t("methods.subtitle") }}
+                    span.main-title {{ $t("methodsTitle") }}
+                    span.subtitle {{ $t("methodsSubtitle") }}
 
                 v-icon.methods-icon(icon="arrow")
 
@@ -36,7 +36,7 @@ export default {
 
     data () {
         return {
-            methods: this.$t('methods.items')
+            methods: this.$t('methodsItems')
         }
     }
 }

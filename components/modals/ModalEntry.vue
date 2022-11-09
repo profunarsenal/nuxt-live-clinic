@@ -1,16 +1,16 @@
 <template lang="pug">
     v-modal(@close="$emit('close')")
         .modal-entry(v-if="isShowForm")
-            h4.title {{ $t("modalEntry.title") }}
+            h4.title {{ $t("modalEntryTitle") }}
 
-            p.subtitle(v-html="$t('modalEntry.subtitle')")
+            p.subtitle(v-html="$t('modalEntrySubtitle')")
 
             form.form(@submit.prevent="submit")
                 v-input(
                     v-model="name"
                     id="name"
                     icon="user"
-                    :placeholder="$t('placeholders.name')"
+                    :placeholder="$t('name')"
                     :error="errors.name"
                     @input="validateName"
                     @onBlur="editName"
@@ -22,7 +22,7 @@
                     icon="phone"
                     id="phone"
                     :error="errors.phone"
-                    :placeholder="$t('placeholders.phone')"
+                    :placeholder="$t('phone')"
                     maxlength="18"
                     @input="validatePhone"
                     @onBlur="validatePhoneNumber"
@@ -33,7 +33,7 @@
                 v-button.form-button(
                     color="primary"
                     type="submit"
-                ) {{ $t("buttons.call") }}
+                ) {{ $t("buttonCall") }}
 
                 v-button.form-button(
                     color="whatsapp"
@@ -47,7 +47,7 @@
                     type="button"
                 )   {{ telegramButton }}
 
-            p.text-info {{ $t("modalEntry.text") }}
+            p.text-info {{ $t("modalEntryText") }}
 
         .message(v-else)
             h6.message-title {{ message.title }}
@@ -92,11 +92,11 @@ export default {
 
     computed: {
         whatsappButton () {
-            return this.isDesktop ? this.$t('buttons.whatsapp') : this.$t('buttons.whatsappMobile')
+            return this.isDesktop ? this.$t('buttonWhatsapp') : this.$t('buttonWhatsappMobile')
         },
 
         telegramButton () {
-            return this.isDesktop ? this.$t('buttons.telegram') : this.$t('buttons.telegramMobile')
+            return this.isDesktop ? this.$t('buttonTelegram') : this.$t('buttonTelegramMobile')
         }
     },
 
@@ -111,14 +111,20 @@ export default {
                         phone: this.phone
                     })
 
-                    this.setMessage(this.$t('messages.formSucces'))
+                    this.setMessage({
+                        title: this.$t('thanks'),
+                        text: this.$t('answerSucces')
+                    })
                     this.isShowForm = false
 
                     this.resetForm()
                     this.clearErrors()
                     this.isFormValid = false
                 } catch {
-                    this.setMessage(this.$t('messages.formError'))
+                    this.setMessage({
+                        title: this.$t('error'),
+                        text: this.$t('answerError')
+                    })
                     this.isShowForm = false
                 }
             }

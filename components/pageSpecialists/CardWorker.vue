@@ -8,17 +8,17 @@
                 )
 
                 .card-badges
-                    span.card-badge {{ $t("specialists.badge") }} {{ worker.experience }}
+                    span.card-badge {{ $t("experience") }} {{ worker.experience }}
                     span.card-badge {{ worker.category }}
                 
                 p.card-link
                     v-icon.card-icon(icon="arrow")
-                    span.card-text(v-html="$t('specialists.more')")
+                    span.card-text(v-html="$t('specialistsLink')")
                 
                 v-button.card-button(
                     color="primary"
                     @click.prevent="openModal"
-                ) {{ $t("buttons.enrollCard") }}
+                ) {{ $t("buttonEnrollCard") }}
             
             .card-info
                 span.card-name {{ worker.name }}
@@ -28,11 +28,11 @@
             v-button.mobile-button(
                 color="primary"
                 @click.prevent="openModal"
-            ) {{ $t("buttons.enrollCard") }}
+            ) {{ $t("buttonEnrollCard") }}
             v-button.mobile-button(
                 color="secondary"
                 @click="$router.push(`/specialist?id=${worker.id}`)"
-            ) {{ $t("buttons.more") }}
+            ) {{ $t("buttonMore") }}
 
         modal-entry(
             v-if="isOpenModal"

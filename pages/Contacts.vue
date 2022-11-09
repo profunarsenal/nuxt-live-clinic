@@ -1,7 +1,7 @@
 <template lang="pug">
     .container
         .contacts-header
-            h2.title {{ $t("contacts.title") }}
+            h2.title {{ $t("contacts") }}
 
             img.contacts-image(
                 src="@/assets/images/contacts.svg"
@@ -27,7 +27,7 @@ export default {
 
     head () {
         return {
-            title: this.$t('titles.contacts')
+            title: this.$t('contacts')
         }
     }
 

@@ -2,7 +2,7 @@
     section.article
         v-crumbs(
             link="/info"
-            :lastPage="$t('articles.crumbs')"
+            :lastPage="$t('info')"
             :currentPage="article.title"
         )
 
@@ -20,7 +20,7 @@
                 p.author-name {{ article.author }}
                 p.time
                     span {{ article.date }} • {{ article.time }}
-                    span  {{ $tc("minutes", defineMinutes) }} {{ $t("articles.read") }}
+                    span  {{ $tc("minutes", defineMinutes) }} {{ $t("read") }}
         
         .content
             .description {{ article.description }}
