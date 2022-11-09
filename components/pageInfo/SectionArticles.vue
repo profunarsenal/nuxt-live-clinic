@@ -1,5 +1,5 @@
 <template lang="pug">
-    section.articles(v-if="articles.length")
+    section.articles
         .articles-header
             h2.articles-title {{ $t("articles.title") }}
 
@@ -14,8 +14,6 @@
                 :key="article.id"
                 :article="article"
             )
-
-    .error-message(v-else) {{ $t("articles.error") }}
 </template>
 
 <script>
@@ -59,10 +57,6 @@ export default {
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr))
     row-gap: 72px
     column-gap: 48px
-
-.error-message
-    padding: 100px 0
-    font-size: 24px
 
 @media (max-width: 1366px)
     .articles

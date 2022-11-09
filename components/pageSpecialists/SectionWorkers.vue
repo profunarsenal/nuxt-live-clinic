@@ -1,22 +1,19 @@
 <template lang="pug">
-    client-only
-        section.workers(v-if="workers.length")
-            .workers-header
-                h2.title(v-html="$t('specialists.title')")
-                img.image(
-                    src="@/assets/images/workers.svg"
-                    alt="illustration"
-                )
-                v-icon.workers-icon(icon="arrow")
+    section.workers
+        .workers-header
+            h2.title(v-html="$t('specialists.title')")
+            img.image(
+                src="@/assets/images/workers.svg"
+                alt="illustration"
+            )
+            v-icon.workers-icon(icon="arrow")
 
-            ul.workers-cards
-                card-worker(
-                    v-for="card in workers"
-                    :key="card.id"
-                    :worker="card"
-                )
-
-        .error-message(v-else) {{ $t("specialists.error") }}
+        ul.workers-cards
+            card-worker(
+                v-for="card in workers"
+                :key="card.id"
+                :worker="card"
+            )
 </template>
 
 <script>
@@ -62,10 +59,6 @@ export default {
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 16px
-
-.error-message
-    padding-top: 100px
-    font-size: 24px
 
 @media (max-width: 1200px)
     .image

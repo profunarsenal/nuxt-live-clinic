@@ -1,7 +1,17 @@
 <template lang="pug">
     .container
-        section-questions(:spollers="spollers")
-        section-articles(:articles="articles")
+        section-questions(
+            v-if="spollers.length"
+            :spollers="spollers"
+        )
+        .error-message(v-else) {{ $t("questions.error") }}
+
+        section-articles(
+            v-if="articles.length"
+            :articles="articles"
+        )
+        .error-message(v-else) {{ $t("articles.error") }}
+
         section-contacts
 </template>
 
@@ -21,9 +31,15 @@ export default {
         SectionContacts
     },
 
-    async fetch ({ store }) {
-        await store.dispatch('cache/cacheRequest', 'spollers')
-        await store.dispatch('cache/cacheRequest', 'articles')
+    async fetch ({ store, $service }) {
+        await store.dispatch('cache/cacheRequest', {
+            key: 'spollers',
+            request: () => $service.spollers.getSpollers()
+        })
+        await store.dispatch('cache/cacheRequest', {
+            key: 'articles',
+            request: () => $service.articles.getArticles()
+        })
     },
 
     head () {

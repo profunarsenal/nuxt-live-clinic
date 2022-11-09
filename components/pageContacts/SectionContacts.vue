@@ -1,5 +1,4 @@
 <template lang="pug">
-    client-only
         section(:class="contactsClasses")
             h2.section-title {{ $t("contacts.titleSection") }}
 

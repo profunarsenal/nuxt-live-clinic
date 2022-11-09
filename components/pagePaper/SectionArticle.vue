@@ -1,5 +1,5 @@
 <template lang="pug">
-    section.article(v-if="article")
+    section.article
         v-crumbs(
             link="/info"
             :lastPage="$t('articles.crumbs')"
@@ -32,8 +32,6 @@
                 )
                     h4.description-title {{ item.title }}
                     p.description-text {{ item.description }}
-
-    .error-message(v-else) {{ $t("article.error") }}
 </template>
 
 <script>
@@ -122,10 +120,6 @@ export default {
     font-size: 20px
     line-height: 175%
     color: $color-darkgray
-
-.error-message
-    padding: 100px 0
-    font-size: 24px
 
 @media (max-width: 1366px)
     .article

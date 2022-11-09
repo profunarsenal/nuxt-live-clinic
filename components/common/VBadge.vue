@@ -20,7 +20,7 @@ export default {
         type: {
             type: String,
             default: 'number',
-            validator: (value) => {
+            validator: value => {
                 return ['number', 'discount-blue', 'discount-green'].includes(value)
             }
         }

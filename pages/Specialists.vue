@@ -1,6 +1,11 @@
 <template lang="pug">
     .container
-        section-workers(:workers="workers")
+        section-workers(
+            v-if="workers.length"
+            :workers="workers"
+        )
+        .error-message(v-else) {{ $t("specialists.error") }}
+
         section-contacts
 </template>
 
@@ -17,8 +22,11 @@ export default {
         SectionContacts
     },
 
-    async fetch ({ store }) {
-        await store.dispatch('cache/cacheRequest', 'workers')
+    async fetch ({ store, $service }) {
+        await store.dispatch('cache/cacheRequest', {
+            key: 'workers',
+            request: () => $service.workers.getWorkers()
+        })
     },
 
     head () {

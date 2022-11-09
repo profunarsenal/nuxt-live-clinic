@@ -1,5 +1,5 @@
 <template lang="pug">
-    section.questions(v-if="spollers.length")
+    section.questions
         .questions-header
             h2.questions-title {{ $t("questions.title") }}
 
@@ -29,8 +29,6 @@
                 )
                     h5.spollers-title {{ spoller.title }}
                     p.spollers-description {{ spoller.description }}
-
-    .error-message(v-else) {{ $t("questions.error") }}
 </template>
 
 <script>
@@ -188,10 +186,6 @@ export default {
     visibility: hidden
     transition: opacity 0.3s ease
     transition: height width 0.5s ease
-
-.error-message
-    padding-top: 100px
-    font-size: 24px
 
 @media (max-width: 1366px)
     .questions

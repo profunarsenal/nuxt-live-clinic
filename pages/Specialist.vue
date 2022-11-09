@@ -1,6 +1,10 @@
 <template lang="pug">
     .container
-        section-specialist(:worker="worker")
+        section-specialist(
+            v-if="worker"
+            :worker="worker"
+        )
+        .error-message(v-else) {{ $t("specialist.error") }}
 
         ul.other-specialists
             card-worker(
@@ -27,8 +31,11 @@ export default {
         CardWorker
     },
 
-    async fetch ({ store }) {
-        await store.dispatch('cache/cacheRequest', 'workers')
+    async fetch ({ store, $service }) {
+        await store.dispatch('cache/cacheRequest', {
+            key: 'workers',
+            request: () => $service.workers.getWorkers()
+        })
     },
 
     head () {

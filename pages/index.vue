@@ -5,7 +5,13 @@
     section-profile
     section-methods
     section-solutions
-    section-workers.section(:workers="workers")
+
+    section-workers.section(
+        v-if="workers.length"
+        :workers="workers"
+    )
+    .error-message(v-else) {{ $t("specialists.error") }}
+
     section-entry
     section-contacts.section
 </template>
@@ -37,8 +43,11 @@ export default Vue.extend({
         SectionContacts
     },
 
-    async fetch ({ store }) {
-        await store.dispatch('cache/cacheRequest', 'workers')
+    async fetch ({ store, $service }) {
+        await store.dispatch('cache/cacheRequest', {
+            key: 'workers',
+            request: () => $service.workers.getWorkers()
+        })
     },
 
     head () {
@@ -63,6 +72,9 @@ export default Vue.extend({
 .section
     @extend .container
     padding-bottom: 150px
+
+.error-message
+    @extend .container
 
 @media (max-width: 1366px)
     .section

@@ -1,6 +1,11 @@
 <template lang="pug">
     .container
-        section-article(:article="article")
+        section-article(
+            v-if="article"
+            :article="article"
+        )
+        .error-message(v-else) {{ $t("article.error") }}
+
         articles-slider(:articles="otherArticles")
         section-contacts
 </template>
@@ -20,8 +25,11 @@ export default {
         ArticlesSlider
     },
 
-    async fetch ({ store }) {
-        await store.dispatch('cache/cacheRequest', 'articles')
+    async fetch ({ store, $service }) {
+        await store.dispatch('cache/cacheRequest', {
+            key: 'articles',
+            request: () => $service.articles.getArticles()
+        })
     },
 
     head () {

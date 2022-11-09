@@ -1,5 +1,5 @@
 <template lang="pug">
-    section.specialist(v-if="worker")
+    section.specialist
         v-crumbs(
             link="/specialists"
             :lastPage="$t('specialist.crumbs')"
@@ -37,8 +37,6 @@
                     v-if="isOpenModal"
                     @close="closeModal"
                 )
-
-    .error-message(v-else) {{ $t("specialist.error") }}
 </template>
 
 <script>
@@ -168,10 +166,6 @@ export default {
 
 .info-button
     width: 100%
-
-.error-message
-    padding-top: 100px
-    font-size: 24px
 
 @media (max-width: 1366px)
     .specialist

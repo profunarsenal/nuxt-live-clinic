@@ -1,6 +1,11 @@
 <template lang="pug">
     .container
-        section-price(:services="services")
+        section-price(
+            v-if="services.length"
+            :services="services"
+        )
+        .error-message(v-else) {{ $t("services.error") }}
+
         section-contacts
 </template>
 
@@ -17,8 +22,11 @@ export default {
         SectionContacts
     },
 
-    async fetch ({ store }) {
-        await store.dispatch('cache/cacheRequest', 'services')
+    async fetch ({ store, $service }) {
+        await store.dispatch('cache/cacheRequest', {
+            key: 'services',
+            request: () => $service.services.getServices()
+        })
     },
 
     head () {

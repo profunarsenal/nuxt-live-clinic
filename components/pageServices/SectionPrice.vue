@@ -1,5 +1,5 @@
 <template lang="pug">
-    section.price(v-if="services.length")
+    section.price
         .price-header
             h2.title {{ $t("services.title") }}
             img.image(
@@ -14,8 +14,6 @@
                 :key="service.id"
                 :service="service"
             )
-
-    .error-message(v-else) {{ $t("services.error") }}
 </template>
 
 <script>
@@ -63,10 +61,6 @@ export default {
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(268px, 1fr))
     gap: 16px
-
-.error-message
-    padding-top: 100px
-    font-size: 24px
 
 @media (max-width: 1366px)
     .image

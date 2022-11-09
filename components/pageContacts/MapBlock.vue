@@ -1,16 +1,17 @@
 <template lang="pug">
-    div(:class="mapClasses")
-        yandex-map(
-            :settings="settings"
-            :coords="coords"
-            :zoom="15"
-            style="width: 100%; height: 100%"
-        )
-            ymap-marker(
+    client-only
+        div(:class="mapClasses")
+            yandex-map(
+                :settings="settings"
                 :coords="coords"
-                marker-id="1"
-                hint-content="liveclinic"
+                :zoom="15"
+                style="width: 100%; height: 100%"
             )
+                ymap-marker(
+                    :coords="coords"
+                    marker-id="1"
+                    hint-content="liveclinic"
+                )
 </template>
 
 <script>
