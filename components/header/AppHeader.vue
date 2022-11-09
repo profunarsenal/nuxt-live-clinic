@@ -10,33 +10,33 @@
                 )
 
             nav(:class="navigationClasses")
-                ul.navigation-list
-                    li.navigation-item(@click="closeMenu")
+                ul.navigation-list(@click="closeMenu")
+                    li.navigation-item
                         nuxt-link.navigation-link(
                             to="/"
                             active-class='active'
                             exact
                         ) {{ $t("main") }}
 
-                    li.navigation-item(@click="closeMenu")
+                    li.navigation-item
                         nuxt-link.navigation-link(
                             to="/services"
                             active-class='active'
                         ) {{ $t("services") }}
 
-                    li.navigation-item(@click="closeMenu")
+                    li.navigation-item
                         nuxt-link.navigation-link(
                             to="/specialists"
                             active-class='active'
                         ) {{ $t("specialists") }}
 
-                    li.navigation-item(@click="closeMenu")
+                    li.navigation-item
                         nuxt-link.navigation-link(
                             to="/info"
                             active-class='active'
                         ) {{ $t("info") }}
 
-                    li.navigation-item(@click="closeMenu")
+                    li.navigation-item
                         nuxt-link.navigation-link(
                             to="/contacts"
                             active-class='active'
@@ -58,19 +58,18 @@
             
             button.burger-button(@click="toggleMenu")
                 v-icon(
-                    v-if="!isOpenMenuBurger"
+                    v-if="isOpenMenu"
                     class="burger-icon"
-                    icon="burger"
+                    icon="close"
                 )
                 v-icon(
                     v-else
                     class="burger-icon"
-                    icon="close"
+                    icon="burger"
                 )
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
 import VIcon from '@/components/common/VIcon'
 
 export default {
@@ -82,29 +81,28 @@ export default {
 
     data () {
         return {
-            positionY: 0
+            positionY: 0,
+            isOpenMenu: false
         }
     },
 
     computed: {
-        ...mapGetters(['isOpenMenuBurger']),
-
         headerClasses () {
             const classes = {
-                    scroll: this.positionY > 0,
-                    open: this.isOpenMenuBurger
+                    scroll: this.positionY,
+                    open: this.isOpenMenu
                 }
 
             return ['header', classes]
         },
 
         navigationClasses () {
-            return ['navigation', { open: this.isOpenMenuBurger }]
+            return ['navigation', { open: this.isOpenMenu }]
         }
     },
 
     watch: {
-        isOpenMenuBurger (newVal) {
+        isOpenMenu (newVal) {
             if (newVal) {
                 document.body.classList.add('lock')
             } else {
@@ -118,7 +116,13 @@ export default {
     },
 
     methods: {
-        ...mapMutations(['closeMenu', 'toggleMenu']),
+        closeMenu () {
+            this.isOpenMenu = false
+        },
+
+        toggleMenu () {
+            this.isOpenMenu = !this.isOpenMenu
+        },
 
         scrollHandler () {
             this.positionY = window.scrollY
