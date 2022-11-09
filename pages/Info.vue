@@ -17,10 +17,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { scrollToSection } from '@/helpers/scrollToSection'
-import SectionQuestions from '@/components/pageInfo/SectionQuestions'
-import SectionArticles from '@/components/pageInfo/SectionArticles'
-import SectionContacts from '@/components/pageContacts/SectionContacts'
+import { scrollToSection } from '~/helpers/scrollToSection'
+import SectionQuestions from '~/components/pageInfo/SectionQuestions'
+import SectionArticles from '~/components/pageInfo/SectionArticles'
+import SectionContacts from '~/components/pageContacts/SectionContacts'
 
 export default {
     name: 'Info',

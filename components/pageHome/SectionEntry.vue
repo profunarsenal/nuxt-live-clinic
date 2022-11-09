@@ -43,11 +43,11 @@
 
 <script>
 import { IMaskDirective } from 'vue-imask'
-import valitation from '@/mixins/validation'
-import VIcon from '@/components/common/VIcon'
-import VButton from '@/components/common/VButton'
-import VInput from '@/components/common/VInput'
-import ModalMessage from '@/components/modals/ModalMessage'
+import valitation from '~/mixins/validation'
+import VIcon from '~/components/common/VIcon'
+import VButton from '~/components/common/VButton'
+import VInput from '~/components/common/VInput'
+import ModalMessage from '~/components/modals/ModalMessage'
 
 export default {
     name: 'SectionEntry',

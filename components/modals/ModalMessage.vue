@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import VModal from '@/components/common/VModal'
+import VModal from '~/components/common/VModal'
 
 export default {
     name: 'ModalMessage',

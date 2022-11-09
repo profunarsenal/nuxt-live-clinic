@@ -4,7 +4,7 @@
             .section-wrapper
                 .image-wrapper
                     img.image(
-                        src="@/assets/images/main-screen.svg"
+                        src="~/assets/images/main-screen.svg"
                         alt="illustration"
                     )
 
@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import VButton from '@/components/common/VButton'
-import ModalEntry from '@/components/modals/ModalEntry'
+import VButton from '~/components/common/VButton'
+import ModalEntry from '~/components/modals/ModalEntry'
 
 export default {
     name: 'MainScreen',

@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import MapBlock from '@/components/pageContacts/MapBlock'
-import ContactsBlock from '@/components/pageContacts/ContactsBlock'
+import MapBlock from '~/components/pageContacts/MapBlock'
+import ContactsBlock from '~/components/pageContacts/ContactsBlock'
 
 export default {
     name: 'SectionContacts',

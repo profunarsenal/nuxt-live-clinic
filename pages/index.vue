@@ -19,15 +19,15 @@
 <script>
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
-import { scrollToSection } from '@/helpers/scrollToSection'
-import MainScreen from '@/components/pageHome/MainScreen'
-import SectionAbout from '@/components/pageHome/SectionAbout'
-import SectionProfile from '@/components/pageHome/SectionProfile'
-import SectionMethods from '@/components/pageHome/SectionMethods'
-import SectionSolutions from '@/components/pageHome/SectionSolutions'
-import SectionWorkers from '@/components/pageSpecialists/SectionWorkers'
-import SectionEntry from '@/components/pageHome/SectionEntry'
-import SectionContacts from '@/components/pageContacts/SectionContacts'
+import { scrollToSection } from '~/helpers/scrollToSection'
+import MainScreen from '~/components/pageHome/MainScreen'
+import SectionAbout from '~/components/pageHome/SectionAbout'
+import SectionProfile from '~/components/pageHome/SectionProfile'
+import SectionMethods from '~/components/pageHome/SectionMethods'
+import SectionSolutions from '~/components/pageHome/SectionSolutions'
+import SectionWorkers from '~/components/pageSpecialists/SectionWorkers'
+import SectionEntry from '~/components/pageHome/SectionEntry'
+import SectionContacts from '~/components/pageContacts/SectionContacts'
 
 export default Vue.extend({
     name: 'IndexPage',

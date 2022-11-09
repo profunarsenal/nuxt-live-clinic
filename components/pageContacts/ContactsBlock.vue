@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
-import VButton from '@/components/common/VButton'
-import ModalEntry from '@/components/modals/ModalEntry'
+import VIcon from '~/components/common/VIcon'
+import VButton from '~/components/common/VButton'
+import ModalEntry from '~/components/modals/ModalEntry'
 
 export default {
     name: 'ContactsBlock',

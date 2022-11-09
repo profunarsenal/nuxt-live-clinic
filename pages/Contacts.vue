@@ -4,7 +4,7 @@
             h2.title {{ $t("contacts") }}
 
             img.contacts-image(
-                src="@/assets/images/contacts.svg"
+                src="~/assets/images/contacts.svg"
                 alt="illustration"
             )
 
@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
-import SectionContacts from '@/components/pageContacts/SectionContacts'
+import VIcon from '~/components/common/VIcon'
+import SectionContacts from '~/components/pageContacts/SectionContacts'
 
 export default {
     name: 'Contacts',

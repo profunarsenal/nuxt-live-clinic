@@ -14,7 +14,7 @@
 
 <script>
 import Teleport from 'vue2-teleport'
-import VIcon from '@/components/common/VIcon'
+import VIcon from '~/components/common/VIcon'
 
 export default {
     name: 'VModal',

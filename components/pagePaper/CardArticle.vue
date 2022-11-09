@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import pluralization from '@/mixins/pluralization'
-import VTag from '@/components/common/VTag'
+import pluralization from '~/mixins/pluralization'
+import VTag from '~/components/common/VTag'
 
 export default {
     name: 'CardArticle',

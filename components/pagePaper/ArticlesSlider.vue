@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CardArticle from '@/components/pagePaper/CardArticle'
+import CardArticle from '~/components/pagePaper/CardArticle'
 
 export default {
     name: 'ArticlesSlider',

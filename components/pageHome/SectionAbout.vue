@@ -7,13 +7,13 @@
                 p.about-text {{ $t("aboutSecondSubtitle") }}
                 v-icon.about-icon(icon="arrow")
             img.image(
-                src="@/assets/images/about.jpg"
+                src="~/assets/images/about.jpg"
                 alt="Team"
             )
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
+import VIcon from '~/components/common/VIcon'
 
 export default {
     name: 'SectionAbout',

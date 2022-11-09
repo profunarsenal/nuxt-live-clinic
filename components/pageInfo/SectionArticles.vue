@@ -4,7 +4,7 @@
             h2.articles-title {{ $t("articles") }}
 
             img.image(
-                src="@/assets/images/articles.svg"
+                src="~/assets/images/articles.svg"
                 alt="illustration"
             )
 
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import CardArticle from '@/components/pagePaper/CardArticle'
+import CardArticle from '~/components/pagePaper/CardArticle'
 
 export default {
     name: 'SectionArticles',

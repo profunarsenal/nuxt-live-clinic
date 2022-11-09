@@ -3,7 +3,7 @@
         .price-header
             h2.title {{ $t("services") }}
             img.image(
-                src="@/assets/images/price.svg"
+                src="~/assets/images/price.svg"
                 alt="illustration"
             )
             v-icon.price-icon(icon="arrow")
@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
-import CardService from '@/components/pageServices/CardService'
+import VIcon from '~/components/common/VIcon'
+import CardService from '~/components/pageServices/CardService'
 
 export default {
     name: 'SectionPrice',

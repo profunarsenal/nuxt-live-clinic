@@ -13,7 +13,7 @@
                     )
                         .image-wrapper
                             img.image(
-                                :src="require(`@/assets/images/works_${item.id}.svg`)"
+                                :src="require(`~/assets/images/works_${item.id}.svg`)"
                                 alt="illustration"
                             )
                         p.description {{ item.title }}
@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
-import VBadge from '@/components/common/VBadge'
+import VIcon from '~/components/common/VIcon'
+import VBadge from '~/components/common/VBadge'
 
 export default {
     name: 'SectionProfile',

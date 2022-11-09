@@ -11,8 +11,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SectionWorkers from '@/components/pageSpecialists/SectionWorkers'
-import SectionContacts from '@/components/pageContacts/SectionContacts'
+import SectionWorkers from '~/components/pageSpecialists/SectionWorkers'
+import SectionContacts from '~/components/pageContacts/SectionContacts'
 
 export default {
     name: 'Specialists',

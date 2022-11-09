@@ -24,7 +24,7 @@
 
 <script>
 import { IMaskDirective } from 'vue-imask'
-import VIcon from '@/components/common/VIcon'
+import VIcon from '~/components/common/VIcon'
 
 export default {
     name: 'VInput',

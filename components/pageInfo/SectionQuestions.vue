@@ -15,7 +15,7 @@
 
             .image-wrapper
                 img.image(
-                    src="@/assets/images/questions.svg"
+                    src="~/assets/images/questions.svg"
                     alt="illustration"
                 )
         
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
+import VIcon from '~/components/common/VIcon'
 
 export default {
     name: 'SectionQuestions',

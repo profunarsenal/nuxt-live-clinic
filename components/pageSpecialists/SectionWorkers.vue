@@ -3,7 +3,7 @@
         .workers-header
             h2.title(v-html="$t('specialists')")
             img.image(
-                src="@/assets/images/workers.svg"
+                src="~/assets/images/workers.svg"
                 alt="illustration"
             )
             v-icon.workers-icon(icon="arrow")
@@ -17,8 +17,9 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
-import CardWorker from '@/components/pageSpecialists/CardWorker'
+import VIcon from '~/components/common/VIcon'
+import CardWorker from '~/components/pageSpecialists/CardWorker'
+
 export default {
     name: 'SectionWorkers',
 

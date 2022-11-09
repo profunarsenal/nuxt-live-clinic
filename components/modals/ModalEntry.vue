@@ -56,13 +56,13 @@
 
 <script>
 import { IMaskDirective } from 'vue-imask'
-import validation from '@/mixins/validation'
-import window from '@/mixins/window'
-import VInput from '@/components/common/VInput'
-import VIcon from '@/components/common/VIcon'
-import VButton from '@/components/common/VButton'
-import VModal from '@/components/common/VModal'
-import ModalMessage from '@/components/modals/ModalMessage'
+import validation from '~/mixins/validation'
+import window from '~/mixins/window'
+import VInput from '~/components/common/VInput'
+import VIcon from '~/components/common/VIcon'
+import VButton from '~/components/common/VButton'
+import VModal from '~/components/common/VModal'
+import ModalMessage from '~/components/modals/ModalMessage'
 
 export default {
     name: 'ModalEntry',

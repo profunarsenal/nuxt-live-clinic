@@ -1,7 +1,7 @@
 <template lang="pug">
     .error
         img(
-            src="@/assets/images/404.jpg"
+            src="~/assets/images/404.jpg"
             class="error-image"
         )
 
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import VButton from '@/components/common/VButton'
+import VButton from '~/components/common/VButton'
 
 export default {
     components: {

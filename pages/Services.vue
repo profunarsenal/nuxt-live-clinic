@@ -11,8 +11,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SectionPrice from '@/components/pageServices/SectionPrice'
-import SectionContacts from '@/components/pageContacts/SectionContacts'
+import SectionPrice from '~/components/pageServices/SectionPrice'
+import SectionContacts from '~/components/pageContacts/SectionContacts'
 
 export default {
     name: 'Services',

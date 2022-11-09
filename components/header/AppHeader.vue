@@ -5,7 +5,7 @@
                 to="/"
             )
                 img.logo-image(
-                    src="@/assets/images/logo.svg"
+                    src="~/assets/images/logo.svg"
                     alt="logo"
                 )
 
@@ -14,32 +14,32 @@
                     li.navigation-item
                         nuxt-link.navigation-link(
                             to="/"
-                            active-class='active'
+                            active-class="active"
                             exact
                         ) {{ $t("main") }}
 
                     li.navigation-item
                         nuxt-link.navigation-link(
                             to="/services"
-                            active-class='active'
+                            active-class="active"
                         ) {{ $t("services") }}
 
                     li.navigation-item
                         nuxt-link.navigation-link(
                             to="/specialists"
-                            active-class='active'
+                            active-class="active"
                         ) {{ $t("specialists") }}
 
                     li.navigation-item
                         nuxt-link.navigation-link(
                             to="/info"
-                            active-class='active'
+                            active-class="active"
                         ) {{ $t("info") }}
 
                     li.navigation-item
                         nuxt-link.navigation-link(
                             to="/contacts"
-                            active-class='active'
+                            active-class="active"
                         ) {{ $t("contacts") }}
 
             .contacts
@@ -54,7 +54,7 @@
                     v-icon.contacts-icon.icon-telegram(
                         icon="telegram"
                     )
-                button.button-lang(@click="switchLang") {{ $t('lang') }}
+                button.button-lang(@click="switchLang") {{ $t("lang") }}
             
             button.burger-button(@click="toggleMenu")
                 v-icon(
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
+import VIcon from '~/components/common/VIcon'
 
 export default {
     name: 'AppHeader',

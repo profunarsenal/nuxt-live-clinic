@@ -40,10 +40,10 @@
 </template>
 
 <script>
-import VCrumbs from '@/components/common/VCrumbs'
-import VIcon from '@/components/common/VIcon'
-import VButton from '@/components/common/VButton'
-import ModalEntry from '@/components/modals/ModalEntry'
+import VCrumbs from '~/components/common/VCrumbs'
+import VIcon from '~/components/common/VIcon'
+import VButton from '~/components/common/VButton'
+import ModalEntry from '~/components/modals/ModalEntry'
 
 export default {
     name: 'SectionSpecialist',

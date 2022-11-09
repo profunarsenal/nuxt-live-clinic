@@ -12,9 +12,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SectionArticle from '@/components/pagePaper/SectionArticle'
-import SectionContacts from '@/components/pageContacts/SectionContacts'
-import ArticlesSlider from '@/components/pagePaper/ArticlesSlider'
+import SectionArticle from '~/components/pagePaper/SectionArticle'
+import SectionContacts from '~/components/pageContacts/SectionContacts'
+import ArticlesSlider from '~/components/pagePaper/ArticlesSlider'
 
 export default {
     name: 'Paper',

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
+import VIcon from '~/components/common/VIcon'
 
 export default {
     name: 'SectionSolutions',

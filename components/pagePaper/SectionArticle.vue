@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import pluralization from '@/mixins/pluralization'
-import VTag from '@/components/common/VTag'
-import VCrumbs from '@/components/common/VCrumbs'
+import pluralization from '~/mixins/pluralization'
+import VTag from '~/components/common/VTag'
+import VCrumbs from '~/components/common/VCrumbs'
 
 export default {
     name: 'SectionArticle',

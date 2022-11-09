@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import VIcon from '@/components/common/VIcon'
-import VBadge from '@/components/common/VBadge'
+import VIcon from '~/components/common/VIcon'
+import VBadge from '~/components/common/VBadge'
 
 export default {
     name: 'CardService',
