@@ -1,8 +1,8 @@
-import Workers from './workers'
-import Articles from './articles'
-import Spollers from './spollers'
-import Services from './services'
-import Applications from './applications'
+import Workers from './Workers'
+import Articles from './Articles'
+import Spollers from './Spollers'
+import Services from './Services'
+import Applications from './Applications'
 
 export default class ServiceApi {
     constructor (axios, i18n) {

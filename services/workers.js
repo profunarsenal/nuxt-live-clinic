@@ -1,3 +1,5 @@
+import WorkerObject from '~/models/WorkerObject'
+
 export default class Workers {
     constructor (axios) {
         this.axios = axios
@@ -5,6 +7,6 @@ export default class Workers {
 
     async getWorkers () {
         const { data } = await this.axios.get('/workers.json')
-        return data
+        return data.map(item => new WorkerObject(item))
     }
 }
