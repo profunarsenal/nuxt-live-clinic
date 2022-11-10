@@ -30,7 +30,7 @@ import SectionEntry from '~/components/pageHome/SectionEntry'
 import SectionContacts from '~/components/pageContacts/SectionContacts'
 
 export default Vue.extend({
-    name: 'IndexPage',
+    name: 'Index',
 
     components: {
         MainScreen,
