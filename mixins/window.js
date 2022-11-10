@@ -9,10 +9,15 @@ export default {
         this.windowUpdateWidth()
         window.addEventListener('resize', this.windowUpdateWidth)
     },
+
+    beforeDestroy () {
+        window.removeEventListener('resize', this.windowUpdateWidth)
+    },
   
     methods: {
         windowUpdateWidth () {
             const width = window.innerWidth
+            console.log(width)
     
             if (width < 576) {
                 this.isDesktop = false
