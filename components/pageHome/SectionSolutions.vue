@@ -16,7 +16,7 @@
                 ul.solutions-items
                     li.solutions-item(
                         v-for="item in solutions"
-                        :key="item.text"
+                        :key="item"
                     )
                         v-icon.check(icon="check")
                         p.description(v-html="item")
