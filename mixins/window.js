@@ -17,7 +17,6 @@ export default {
     methods: {
         windowUpdateWidth () {
             const width = window.innerWidth
-            console.log(width)
     
             if (width < 576) {
                 this.isDesktop = false
