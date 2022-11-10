@@ -2,7 +2,7 @@
     footer.footer
         .container
             .footer-top
-                a.logo(@click="goToPage("/")")
+                a.logo(@click="goToPage('/')")
                     img.logo-image(
                         src="~/assets/images/logo.svg"
                         alt="logotype"
