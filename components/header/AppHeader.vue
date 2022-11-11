@@ -70,6 +70,7 @@
 </template>
 
 <script>
+import { RU } from '~/helpers/constants'
 import VIcon from '~/components/common/VIcon'
 
 export default {
@@ -129,7 +130,7 @@ export default {
         },
 
         switchLang () {
-            if (this.$i18n.locale === 'ru') {
+            if (this.$i18n.locale === RU) {
                 this.$cookies.set('i18n_redirected', 'en')
             } else {
                 this.$cookies.set('i18n_redirected', 'ru')

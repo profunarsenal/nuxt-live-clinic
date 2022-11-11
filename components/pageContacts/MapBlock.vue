@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { RU } from '~/helpers/constants'
+
 export default {
     name: 'MapBlock',
 
@@ -49,7 +51,7 @@ export default {
     },
 
     created () {
-        if (this.$i18n.locale === 'ru') {
+        if (this.$i18n.locale === RU) {
             this.settings.lang = 'ru_RU'
         } else {
             this.settings.lang = 'en_US'
