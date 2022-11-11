@@ -27,7 +27,7 @@
 
             ul.description-list
                 li.description-item(
-                    v-for="item in article.articles"
+                    v-for="item in article.paragraphs"
                     :key="item.title"
                 )
                     h4.description-title {{ item.title }}
