@@ -5,7 +5,7 @@ class ArticleParagraph {
     }
 }
 
-class ArticleObject {
+export default class ArticleModel {
     constructor (payload = {}) {
         this.id = payload.id || 0
         this.time = payload.time || 0
@@ -16,8 +16,6 @@ class ArticleObject {
         this.title = payload.title || ''
         this.description = payload.description || ''
         this.date = payload.date || ''
-        this.articles = payload.articles.map(item => new ArticleParagraph(item)) || []
+        this.paragraphs = payload.paragraphs?.map(item => new ArticleParagraph(item)) || []
     }
 }
-
-export default ArticleObject

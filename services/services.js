@@ -1,4 +1,4 @@
-import ServiceObject from '~/models/ServiceObject'
+import ServiceModel from '~/models/ServiceModel'
 
 export default class Services {
     constructor (axios) {
@@ -7,6 +7,6 @@ export default class Services {
 
     async getServices () {
         const { data } = await this.axios.get('/services.json')
-        return data.map(item => new ServiceObject(item))
+        return data.map(item => new ServiceModel(item))
     }
 }

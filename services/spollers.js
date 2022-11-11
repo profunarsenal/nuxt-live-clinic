@@ -1,4 +1,4 @@
-import SpollerObject from '~/models/SpollerObject'
+import SpollerModel from '~/models/SpollerModel'
 
 export default class Spollers {
     constructor (axios) {
@@ -7,6 +7,6 @@ export default class Spollers {
 
     async getSpollers () {
         const { data } = await this.axios.get('/spollers.json')
-        return data.map(item => new SpollerObject(item))
+        return data.map(item => new SpollerModel(item))
     }
 }

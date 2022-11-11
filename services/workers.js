@@ -1,4 +1,4 @@
-import WorkerObject from '~/models/WorkerObject'
+import WorkerModel from '~/models/WorkerModel'
 
 export default class Workers {
     constructor (axios) {
@@ -7,6 +7,6 @@ export default class Workers {
 
     async getWorkers () {
         const { data } = await this.axios.get('/workers.json')
-        return data.map(item => new WorkerObject(item))
+        return data.map(item => new WorkerModel(item))
     }
 }

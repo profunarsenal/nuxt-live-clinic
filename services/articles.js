@@ -1,4 +1,4 @@
-import ArticleObject from '~/models/ArticleObject'
+import ArticleModel from '~/models/ArticleModel'
 
 export default class Articles {
     constructor (axios) {
@@ -7,6 +7,6 @@ export default class Articles {
 
     async getArticles () {
         const { data } = await this.axios.get('/articles.json')
-        return data.map(item => new ArticleObject(item))
+        return data.map(item => new ArticleModel(item))
     }
 }

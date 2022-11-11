@@ -1,4 +1,4 @@
-export default class ServiceObject {
+export default class ServiceModel {
     constructor (payload = {}) {
         this.id = payload.id || 0
         this.title = payload.title || ''

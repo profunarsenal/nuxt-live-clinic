@@ -1,4 +1,4 @@
-class WorkerDesctiption {
+class WorkerDescription {
     constructor (payload = {}) {
         this.id = payload.id || 0
         this.icon = payload.icon || ''
@@ -7,7 +7,7 @@ class WorkerDesctiption {
     }
 }
 
-class WorkerObject {
+export default class WorkerModel {
     constructor (payload = {}) {
         this.id = payload.id || 0
         this.name = payload.name || ''
@@ -15,8 +15,6 @@ class WorkerObject {
         this.position = payload.position || ''
         this.experience = payload.experience || ''
         this.img = payload.img || ''
-        this.description = payload.description.map(item => new WorkerDesctiption(item)) || []
+        this.description = payload.description?.map(item => new WorkerDescription(item)) || []
     }
 }
-
-export default WorkerObject
