@@ -5,7 +5,7 @@
                 :settings="settings"
                 :coords="coords"
                 :zoom="15"
-                style="width: 100%; height: 100%"
+                class="map"
             )
                 ymap-marker(
                     :coords="coords"
@@ -64,6 +64,10 @@ export default {
     border-radius: 20px
     overflow: hidden
     height: 576px
+
+.map
+    width: 100%
+    height: 100%
 
 @media (max-width: 767px)
     .map-block
