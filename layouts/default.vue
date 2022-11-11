@@ -1,9 +1,9 @@
 <template lang="pug">
     .wrapper
-        AppHeader
+        app-header
         main.main
-            Nuxt
-        AppFooter
+            nuxt
+        app-footer
 </template>
 
 <script>

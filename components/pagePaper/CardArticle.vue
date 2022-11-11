@@ -39,37 +39,37 @@ export default {
 
 <style lang="sass" scoped>
 .card-article
-  display: flex
-  flex-direction: column
-  align-items: flex-start
+    display: flex
+    flex-direction: column
+    align-items: flex-start
 
 .card-title
-  margin-bottom: 12px
-  font-weight: 700
-  font-size: 24px
-  line-height: 135%
-  color: $color-dark
-  overflow: hidden
-  text-overflow: ellipsis
-  display: -webkit-box
-  -webkit-line-clamp: 3
-  line-clamp: 3
-  -webkit-box-orient: vertical
+    margin-bottom: 12px
+    font-weight: 700
+    font-size: 24px
+    line-height: 135%
+    color: $color-dark
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    line-clamp: 3
+    -webkit-box-orient: vertical
 
 .card-description
-  margin-bottom: 24px
-  line-height: 175%
-  color: $color-lightgray
-  overflow: hidden
-  text-overflow: ellipsis
-  display: -webkit-box
-  -webkit-line-clamp: 3
-  line-clamp: 3
-  -webkit-box-orient: vertical
+    margin-bottom: 24px
+    line-height: 175%
+    color: $color-lightgray
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    line-clamp: 3
+    -webkit-box-orient: vertical
 
 .card-time
-  font-weight: 500
-  font-size: 14px
-  line-height: 115%
-  color: $color-cyan
+    font-weight: 500
+    font-size: 14px
+    line-height: 115%
+    color: $color-cyan
 </style>
