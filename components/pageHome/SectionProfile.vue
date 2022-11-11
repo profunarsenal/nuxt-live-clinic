@@ -13,7 +13,7 @@
                     )
                         .image-wrapper
                             img.image(
-                                :src="require(`~/assets/images/works_${item.id}.svg`)"
+                                :src="require(`~/static/images/works_${item.id}.svg`)"
                                 alt="illustration"
                             )
                         p.description {{ item.title }}

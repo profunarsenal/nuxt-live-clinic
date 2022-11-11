@@ -4,7 +4,7 @@
             h2.articles-title {{ $t("articles") }}
 
             img.image(
-                src="~/assets/images/articles.svg"
+                src="images/articles.svg"
                 alt="illustration"
             )
 

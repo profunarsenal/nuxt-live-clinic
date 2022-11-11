@@ -4,7 +4,7 @@
             h2.title {{ $t("contacts") }}
 
             img.contacts-image(
-                src="~/assets/images/contacts.svg"
+                src="images/contacts.svg"
                 alt="illustration"
             )
 

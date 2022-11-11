@@ -5,7 +5,7 @@
                 to="/"
             )
                 img.logo-image(
-                    src="~/assets/images/logo.svg"
+                    src="images/logo.svg"
                     alt="logo"
                 )
 

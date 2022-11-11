@@ -4,7 +4,7 @@
             .footer-top
                 a.logo(@click="goToPage('/')")
                     img.logo-image(
-                        src="~/assets/images/logo.svg"
+                        src="images/logo.svg"
                         alt="logotype"
                     )
 

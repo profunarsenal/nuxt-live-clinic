@@ -15,7 +15,7 @@
 
             .image-wrapper
                 img.image(
-                    src="~/assets/images/questions.svg"
+                    src="images/questions.svg"
                     alt="illustration"
                 )
         
@@ -148,7 +148,7 @@ export default {
         left: 32px
         width: 24px
         height: 26px
-        background: url("@/assets/images/spoller_plus.svg") no-repeat
+        background: url("~static/images/spoller_plus.svg") no-repeat
         transition: all 0.3s ease
 
     &:not(:last-child)
@@ -160,7 +160,7 @@ export default {
 
     &.active
         &::before
-            background-image: url("@/assets/images/spoller_minus.svg")
+            background-image: url("~static/images/spoller_minus.svg")
 
     &.active > .spollers-title
         margin-bottom: 8px

@@ -3,7 +3,7 @@
         .workers-header
             h2.title(v-html="$t('specialists')")
             img.image(
-                src="~/assets/images/workers.svg"
+                src="images/workers.svg"
                 alt="illustration"
             )
             v-icon.workers-icon(icon="arrow")

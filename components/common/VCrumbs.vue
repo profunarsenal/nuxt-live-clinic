@@ -53,7 +53,7 @@ export default {
             right: -26px
             width: 16px
             height: 16px
-            background-image: url("@/assets/images/crumb.svg")
+            background-image: url("~/static/images/crumb.svg")
 
     @media (any-hover: hover)
         &:hover

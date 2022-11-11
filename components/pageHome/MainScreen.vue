@@ -4,7 +4,7 @@
             .section-wrapper
                 .image-wrapper
                     img.image(
-                        src="~/assets/images/main-screen.svg"
+                        src="images/main-screen.svg"
                         alt="illustration"
                     )
 

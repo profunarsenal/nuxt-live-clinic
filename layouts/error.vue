@@ -1,7 +1,7 @@
 <template lang="pug">
     .error
         img(
-            src="~/assets/images/404.jpg"
+            src="images/404.jpg"
             class="error-image"
         )
 

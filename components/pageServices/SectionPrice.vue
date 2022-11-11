@@ -3,7 +3,7 @@
         .price-header
             h2.title {{ $t("services") }}
             img.image(
-                src="~/assets/images/price.svg"
+                src="images/price.svg"
                 alt="illustration"
             )
             v-icon.price-icon(icon="arrow")

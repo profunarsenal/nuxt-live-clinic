@@ -127,7 +127,7 @@ export default {
     justify-content: space-between
     padding: 72px 76px
     border-radius: 48px
-    background: url("~assets/images/frame.svg") no-repeat center / contain
+    background: url("~static/images/frame.svg") no-repeat center / contain
 
 .content
     position: relative

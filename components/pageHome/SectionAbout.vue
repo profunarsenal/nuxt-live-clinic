@@ -7,7 +7,7 @@
                 p.about-text {{ $t("aboutSecondSubtitle") }}
                 v-icon.about-icon(icon="arrow")
             img.image(
-                src="~/assets/images/about.jpg"
+                src="images/about.jpg"
                 alt="Team"
             )
 </template>
