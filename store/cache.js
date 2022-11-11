@@ -25,15 +25,15 @@ export const getters = {
 
 export const mutations = {
     setData (state, data) {
-        state[data.key] = data.responce
+        state[data.key] = data.response
     }
 }
 
 export const actions = {
     async cacheRequest ({ commit, state }, data) {
         if (!state[data.key].length) {
-            const responce = await data.request()
-            commit('setData', { responce, key: data.key })
+            const response = await data.request()
+            commit('setData', { response, key: data.key })
         }
       }
 }
