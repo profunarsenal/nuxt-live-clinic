@@ -8,7 +8,7 @@ export default class ServiceApi {
     constructor (axios, i18n) {
         this.lang = i18n.locale
         this.axios = axios.create({
-            baseURL: `https://liveclinic63-default-rtdb.firebaseio.com/${this.lang}`
+            baseURL: process.env.VUE_APP_API_BASE_URL + this.lang
         })
 
         this.workers = new Workers(this.axios)
