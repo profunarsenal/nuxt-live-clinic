@@ -4,7 +4,7 @@
             .swiper-slide(
                 v-for="article in articles" :key="article.id"
             )
-                <card-article :article="article" />
+                card-article(:article="article")
 </template>
 
 <script>
