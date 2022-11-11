@@ -1,6 +1,5 @@
 <template lang="pug">
     nuxt-link(
-        v-if="article"
         class="card-article"
         :to="`/paper?id=${article.id}`"
     )
@@ -29,7 +28,7 @@ export default {
     props: {
         article: {
             type: Object,
-            default: () => {}
+            required: true
         }
     },
 

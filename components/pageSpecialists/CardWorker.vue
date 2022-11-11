@@ -1,5 +1,5 @@
 <template lang="pug">
-    li.card(v-if="worker")
+    li.card
         nuxt-link(:to="`/specialist?id=${worker.id}`")
             .card-photo
                 img.card-image(

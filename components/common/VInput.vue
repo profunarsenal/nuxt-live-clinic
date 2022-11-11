@@ -45,7 +45,7 @@ export default {
 
         id: {
             type: String,
-            default: null
+            default: ''
         },
 
         icon: {

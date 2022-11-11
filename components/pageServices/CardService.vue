@@ -29,7 +29,7 @@ export default {
     props: {
         service: {
             type: Object,
-            default: () => {}
+            required: true
         }
     },
 
