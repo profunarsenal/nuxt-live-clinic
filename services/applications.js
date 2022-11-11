@@ -1,3 +1,8 @@
+/**
+ * Отправка формы
+ * @property {object} axios
+ */
+
 export default class Applications {
     constructor (axios) {
         this.axios = axios

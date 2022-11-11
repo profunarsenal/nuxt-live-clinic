@@ -1,3 +1,13 @@
+/**
+ * Класс для создания услуги
+ * @property {number} id
+ * @property {string} title
+ * @property {string} time
+ * @property {number} price
+ * @property {string} type
+ * @property {number} discount
+ */
+
 export default class ServiceModel {
     constructor (payload = {}) {
         this.id = payload.id || 0

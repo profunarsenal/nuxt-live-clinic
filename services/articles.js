@@ -1,5 +1,11 @@
 import ArticleModel from '~/models/ArticleModel'
 
+/**
+ * Получаем массив статей
+ * @property {object} axios
+ * @returns {Promise<Array>}
+ */
+
 export default class Articles {
     constructor (axios) {
         this.axios = axios

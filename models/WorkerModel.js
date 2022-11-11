@@ -1,3 +1,11 @@
+/**
+ * Класс для создания описания работника
+ * @property {number} id
+ * @property {string} icon
+ * @property {string} title
+ * @property {string} text
+ */
+
 class WorkerDescription {
     constructor (payload = {}) {
         this.id = payload.id || 0
@@ -6,6 +14,17 @@ class WorkerDescription {
         this.text = payload.text || ''
     }
 }
+
+/**
+ * Класс для создания работника
+ * @property {number} id
+ * @property {string} name
+ * @property {string} category
+ * @property {string} position
+ * @property {string} experience
+ * @property {string} img
+ * @property {Array<Object>} description
+ */
 
 export default class WorkerModel {
     constructor (payload = {}) {

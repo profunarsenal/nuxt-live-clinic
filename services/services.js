@@ -1,5 +1,11 @@
 import ServiceModel from '~/models/ServiceModel'
 
+/**
+ * Получаем массив услуг
+ * @property {object} axios
+ * @returns {Promise<Array>}
+ */
+
 export default class Services {
     constructor (axios) {
         this.axios = axios
