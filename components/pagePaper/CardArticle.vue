@@ -9,13 +9,10 @@
 
         p.card-description {{ article.description }}
 
-        .card-time
-            span {{ article.date }} • {{ article.time }}
-            span  {{ $tc("minutes", defineMinutes) }} {{ $t("read") }}
+        .card-time {{ article.date }} • {{ $tc("minutes", article.time) }} {{ $t("read") }}
 </template>
 
 <script>
-import pluralization from '~/mixins/pluralization'
 import VTag from '~/components/common/VTag'
 
 export default {
@@ -30,9 +27,7 @@ export default {
             type: Object,
             required: true
         }
-    },
-
-    mixins: [pluralization]
+    }
 }
 </script>
 

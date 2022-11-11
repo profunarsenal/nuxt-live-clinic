@@ -129,7 +129,7 @@
     "modalEntryText": "By clicking on the button, you consent to the processing of your personal data and agree to the privacy policy",
     "validateRequired": "Required field",
     "validatePhone": "Enter phone number",
-    "minutes": "minute | minutes",
+    "minutes": "{n} minute |{n} minutes",
     "warning": "Attention!",
     "thanks": "Thanks for the application!",
     "error": "Error!",

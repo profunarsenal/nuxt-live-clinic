@@ -18,9 +18,7 @@
 
             .author
                 p.author-name {{ article.author }}
-                p.time
-                    span {{ article.date }} • {{ article.time }}
-                    span  {{ $tc("minutes", defineMinutes) }} {{ $t("read") }}
+                p.time {{ article.date }} • {{ $tc("minutes", article.time) }} {{ $t("read") }}
         
         .content
             .description {{ article.description }}
@@ -35,7 +33,6 @@
 </template>
 
 <script>
-import pluralization from '~/mixins/pluralization'
 import VTag from '~/components/common/VTag'
 import VCrumbs from '~/components/common/VCrumbs'
 
@@ -52,9 +49,7 @@ export default {
             type: Object,
             default: () => {}
         }
-    },
-
-    mixins: [pluralization]
+    }
 }
 </script>
 
