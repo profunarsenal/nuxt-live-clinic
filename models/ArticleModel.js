@@ -1,10 +1,10 @@
 /**
  * Класс для создания параграфов статьи
+ * 
  * @property {string} title
  * @property {string} description
  */
-
-class ArticleParagraph {
+class Paragraph {
     constructor (payload = {}) {
         this.title = payload.title || ''
         this.description = payload.description || ''
@@ -13,6 +13,7 @@ class ArticleParagraph {
 
 /**
  * Класс для создания статьи
+ * 
  * @property {number} id
  * @property {number} time
  * @property {string} author
@@ -23,7 +24,6 @@ class ArticleParagraph {
  * @property {string} date
  * @property {Array<Object>} paragraphs
  */
-
 export default class ArticleModel {
     constructor (payload = {}) {
         this.id = payload.id || 0
@@ -35,6 +35,6 @@ export default class ArticleModel {
         this.title = payload.title || ''
         this.description = payload.description || ''
         this.date = payload.date || ''
-        this.paragraphs = payload.paragraphs?.map(item => new ArticleParagraph(item)) || []
+        this.paragraphs = payload.paragraphs?.map(item => new Paragraph(item)) || []
     }
 }

@@ -1,16 +1,20 @@
 import ServiceModel from '~/models/ServiceModel'
 
 /**
- * Получаем массив услуг
+ * Класс для работы с услугами
+ * 
  * @property {object} axios
- * @returns {Promise<Array>}
  */
-
 export default class Services {
     constructor (axios) {
         this.axios = axios
     }
 
+    /**
+     * Получение массива услуг
+     * 
+     * @returns {Promise<Array>}
+     */
     async getServices () {
         const { data } = await this.axios.get('/services.json')
         return data.map(item => new ServiceModel(item))

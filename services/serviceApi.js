@@ -6,6 +6,7 @@ import Applications from '~/services/Applications'
 
 /**
  * Класс для создания плагина $service
+ * 
  * @property {object} axios
  * @property {string} lang
  * @property {object} workers
@@ -14,7 +15,6 @@ import Applications from '~/services/Applications'
  * @property {object} services
  * @property {object} applications
  */
-
 export default class ServiceApi {
     constructor (axios, i18n) {
         this.lang = i18n.locale
