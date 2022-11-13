@@ -1,6 +1,6 @@
 <template lang="pug">
     svg.icon
-        use(:xlink:href="'icons/sprite.svg#' + icon")
+        use(:xlink:href="'images/sprite.svg#' + icon")
 </template>
 
 <script>
