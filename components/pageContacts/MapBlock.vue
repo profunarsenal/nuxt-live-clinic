@@ -43,18 +43,17 @@ export default {
     computed: {
         mapClasses () {
             return ['map-block', { reverse: this.isReverse }]
-        },
-
-        lang () {
-            return this.$i18n.locale
         }
     },
 
     created () {
-        if (this.$i18n.locale === RU) {
-            this.settings.lang = 'ru_RU'
-        } else {
-            this.settings.lang = 'en_US'
+        this.setMapLanguage()
+    },
+
+    methods: {
+        setMapLanguage () {
+            const lang = this.$i18n.locale === RU ? 'ru_RU' : 'en_US'
+            this.settings.lang = lang
         }
     }
 }
