@@ -76,6 +76,9 @@ module.exports = {
             exceptions: ['*']
         }
     }],
-    'arrow-parens': ['error', 'as-needed']
+    'arrow-parens': ['error', 'as-needed'],
+    env: {
+        jest: true
+    }
   }
 }
