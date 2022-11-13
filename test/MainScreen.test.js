@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import MainScreen from '@/components/pageHome/MainScreen'
 
 describe('MainScreen', () => {
-    test('test button to open modal', async () => {
+    test('button to open modal', async () => {
         const wrapper = mount(MainScreen, {
             mocks: {
                 $t: () => {}
