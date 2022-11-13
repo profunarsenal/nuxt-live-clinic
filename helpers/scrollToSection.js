@@ -1,6 +1,6 @@
 /**
  * Функция для скролла к определенной секции
- * 
+ *
  * @param {string} elem
  */
 export const scrollToSection = elem => {

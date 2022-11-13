@@ -1,6 +1,6 @@
 /**
  * Класс для создания описания сотрудника
- * 
+ *
  * @property {number} id
  * @property {string} icon
  * @property {string} title
@@ -17,7 +17,7 @@ class Description {
 
 /**
  * Класс для создания сотрудника
- * 
+ *
  * @property {number} id
  * @property {string} name
  * @property {string} category

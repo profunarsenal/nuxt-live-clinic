@@ -1,6 +1,6 @@
 /**
  * Класс для работы с заявками
- * 
+ *
  * @property {object} axios
  */
 export default class Applications {
@@ -10,7 +10,7 @@ export default class Applications {
 
     /**
      * Функция для отправки формы
-     * 
+     *
      * @param {object} form
      */
     async sendApplication (form) {

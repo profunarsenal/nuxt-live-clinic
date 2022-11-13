@@ -2,7 +2,7 @@ import WorkerModel from '~/models/WorkerModel'
 
 /**
  * Класс для работы с сотрудниками
- * 
+ *
  * @property {object} axios
  */
 export default class Workers {
@@ -12,7 +12,7 @@ export default class Workers {
 
     /**
      * Получение массива сотрудников
-     * 
+     *
      * @returns {Promise<Array>}
      */
     async getWorkers () {

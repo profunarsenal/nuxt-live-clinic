@@ -1,6 +1,6 @@
 /**
  * Класс для создания услуги
- * 
+ *
  * @property {number} id
  * @property {string} title
  * @property {string} time

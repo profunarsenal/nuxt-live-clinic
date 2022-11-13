@@ -2,7 +2,7 @@ import ArticleModel from '~/models/ArticleModel'
 
 /**
  * Класс для работы со статьями
- * 
+ *
  * @property {object} axios
  */
 export default class Articles {
@@ -12,7 +12,7 @@ export default class Articles {
 
     /**
      * Получение массива статей
-     * 
+     *
      * @returns {Promise<Array>}
      */
     async getArticles () {

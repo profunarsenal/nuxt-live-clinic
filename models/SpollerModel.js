@@ -1,6 +1,6 @@
 /**
  * Класс для создания споллера
- * 
+ *
  * @property {number} id
  * @property {string} title
  * @property {string} description

@@ -2,7 +2,7 @@ import SpollerModel from '~/models/SpollerModel'
 
 /**
  * Класс для работы со споллерами
- * 
+ *
  * @property {object} axios
  */
 export default class Spollers {
@@ -12,7 +12,7 @@ export default class Spollers {
 
     /**
      * Получение массива споллеров
-     * 
+     *
      * @returns {Promise<Array>}
      */
     async getSpollers () {

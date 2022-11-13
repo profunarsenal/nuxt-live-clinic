@@ -2,7 +2,7 @@ import ServiceModel from '~/models/ServiceModel'
 
 /**
  * Класс для работы с услугами
- * 
+ *
  * @property {object} axios
  */
 export default class Services {
@@ -12,7 +12,7 @@ export default class Services {
 
     /**
      * Получение массива услуг
-     * 
+     *
      * @returns {Promise<Array>}
      */
     async getServices () {

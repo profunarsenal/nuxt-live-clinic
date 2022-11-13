@@ -6,7 +6,7 @@ import Applications from '~/services/Applications'
 
 /**
  * Класс для создания плагина $service
- * 
+ *
  * @property {object} axios
  * @property {string} lang
  * @property {object} workers

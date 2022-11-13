@@ -1,6 +1,6 @@
 /**
  * Класс для создания параграфов статьи
- * 
+ *
  * @property {string} title
  * @property {string} description
  */
@@ -13,7 +13,7 @@ class Paragraph {
 
 /**
  * Класс для создания статьи
- * 
+ *
  * @property {number} id
  * @property {number} time
  * @property {string} author
