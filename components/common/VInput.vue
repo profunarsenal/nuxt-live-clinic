@@ -60,7 +60,7 @@ export default {
 
         placeholder: {
             type: String,
-            required: true
+            default: ''
         },
 
         error: {
