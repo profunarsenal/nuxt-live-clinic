@@ -2,7 +2,7 @@ import { mount, RouterLinkStub  } from '@vue/test-utils'
 import AppHeader from '@/components/header/AppHeader'
 
 describe('AppHeader', () => {
-    test('test nav-links', async () => {
+    test('test nav-links', () => {
         const wrapper = mount(AppHeader, {
             mocks: {
                 $t: () => {}
